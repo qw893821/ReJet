@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1615713076660514, guid: 48cf4b8619fed3946a0dec94bcae090b, type: 2}
+  healthPoint: 500
   lastingtime: 40
 --- !u!212 &212373190067226360
 SpriteRenderer:

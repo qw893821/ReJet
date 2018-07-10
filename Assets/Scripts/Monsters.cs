@@ -5,7 +5,7 @@ using UnityEngine;
 public class Monsters : MonoBehaviour
 {
     public GameObject bullet;
-    float healthPoint;
+    public float healthPoint;
     public float lastingtime;
     // Use this for initialization
    
