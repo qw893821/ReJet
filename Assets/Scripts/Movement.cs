@@ -21,6 +21,22 @@ public class Movement : MonoBehaviour {
     {
         Vector2 pos;
         Vector2 target;
+        if (transform.position.x <= -8.5 && x<0)
+        {
+            x = 0;
+        }
+        else if (transform.position.x >= 8.5 && x > 0)
+        {
+            x = 0;
+        }
+        if (transform.position.y < -4.5 &&y<0)
+        {
+            y = 0;
+        }
+        else if (transform.position.y > 4.5 && y > 0)
+        {
+            y = 0;
+        }
         pos = transform.position;
         target = pos+ new Vector2(x,y).normalized;
         transform.position = Vector2.MoveTowards(transform.position, target, s * Time.deltaTime);
