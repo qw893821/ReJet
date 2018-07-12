@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class BulletGarbge  {
     public string bulletName;
-    public List<GameObject> collection;
+    public List<GameObject> collection=new List<GameObject>();
 	
 }

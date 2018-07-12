@@ -308,10 +308,13 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletGarbge.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\Explision.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Meteor.cs" />
     <Compile Include="Assets\Scripts\Monsters.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\ObjectAdditionalFunction.cs" />
+    <Compile Include="Assets\Scripts\SelfDestroyerEditor.cs" />
     <Compile Include="Assets\Scripts\Shot.cs" />
   </ItemGroup>
   <ItemGroup>

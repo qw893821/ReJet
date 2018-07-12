@@ -37,9 +37,37 @@ public class Monsters : MonoBehaviour
 
     void InstBullet()
     {
+        
         GameObject bullet_Clone;
         bullet_Clone=Instantiate(bullet,transform.position,Quaternion.identity);
         bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
-    }
         
+        /* GameObject bullet_Clone;
+         if (GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).isCreated)
+         {
+
+             if (GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection.Count == 0)
+             {
+                 bullet_Clone=Instantiate(bullet, transform.position, Quaternion.identity);
+                 bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
+             }
+             else
+             {
+                 GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[0].SetActive(true);
+                 GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[0].transform.position = transform.position;
+                 GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[0].GetComponent<EnemyBullet>().SetProperity();
+                 GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection.RemoveAt(0);
+
+             }
+         }
+         else
+         {
+
+             bullet_Clone=Instantiate(bullet, transform.position, Quaternion.identity);
+             bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
+         }
+         */
+
+    }
+
 }
