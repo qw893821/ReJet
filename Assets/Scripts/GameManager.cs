@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
         
     }
     GarbgeCheck gc;
+    public GameObject explision_Anim;
     // Use this for initialization
     void Start () {
         if (!_gm)

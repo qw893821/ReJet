@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Meteor : MonoBehaviour {
-    float h, v;
+    public float h, v;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,5 +25,14 @@ public class Meteor : MonoBehaviour {
         pos = transform.position;
         pos.x -= h*Time.deltaTime;
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
+            Debug.Log("col");
+        }
     }
 }

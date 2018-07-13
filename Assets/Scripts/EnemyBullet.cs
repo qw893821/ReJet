@@ -7,7 +7,6 @@ public class EnemyBullet : MonoBehaviour {
     Vector3 target;
     GameObject player;
     Vector2 dir;
-    public GameObject explision_Anim;
     //enemy bullet disable timer
     float timer;
 	// Use this for initialization
@@ -78,7 +77,7 @@ public class EnemyBullet : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            Instantiate(explision_Anim,transform.position,Quaternion.identity);
+            Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
         }
     }
 }
