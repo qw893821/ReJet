@@ -995,6 +995,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 114803400039373242, guid: a71d6f0936888f24ebc3ab708eb36391,
+        type: 2}
+      propertyPath: enemyBullet
+      value: 
+      objectReference: {fileID: 1615713076660514, guid: 48cf4b8619fed3946a0dec94bcae090b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a71d6f0936888f24ebc3ab708eb36391, type: 2}
   m_IsPrefabParent: 0

@@ -9,23 +9,28 @@ public class GameManager : MonoBehaviour {
         get { return _gm; }
     }
 
-    
     public List<BulletGarbge> bullets;
 
     public struct GarbgeCheck
     {
         public bool isCreated;
         public int garbgeIndex;
-        
+
     }
+
     GarbgeCheck gc;
     public GameObject explision_Anim;
+
+    
+    
     // Use this for initialization
     void Start () {
         if (!_gm)
         {
             _gm = this;
         }
+        else
+        { Destroy(this); }
         bullets = new List<BulletGarbge>();
 
         gc = new GarbgeCheck();

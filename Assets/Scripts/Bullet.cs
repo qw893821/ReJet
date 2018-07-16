@@ -48,13 +48,12 @@ public class Bullet : MonoBehaviour {
         {
             GameManager.gm.bullets.Add(new BulletGarbge());
             GameManager.gm.bullets[0].bulletName = transform.gameObject.name;
-            Debug.Log(GameManager.gm.bullets.Count);
             GameManager.gm.bullets[0].collection.Add(transform.gameObject);
             transform.gameObject.SetActive(false);
         }
         else
         {
-            foreach (BulletGarbge bg in GameManager.gm.bullets)
+            foreach (BulletGarbge bg in GameManager.gm.bullets.ToArray())
             {
                 if (bg.bulletName == transform.gameObject.name)
                 {
@@ -73,8 +72,6 @@ public class Bullet : MonoBehaviour {
                 }
             }
         }
-        
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col)

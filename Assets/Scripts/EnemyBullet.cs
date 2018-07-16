@@ -43,33 +43,32 @@ public class EnemyBullet : MonoBehaviour {
 
     void SelfDisable()
     {
-        /*if (GameManager.gm.bullets.Count == 0)
-        {
-            GameManager.gm.bullets.Add(new BulletGarbge());
-            GameManager.gm.bullets[0].bulletName = transform.gameObject.name;
-            GameManager.gm.bullets[0].collection.Add(transform.gameObject);
-            transform.gameObject.SetActive(false);
-        }
-        else
-        {
-            foreach (BulletGarbge bg in GameManager.gm.bullets.ToArray())
-            {
-                if (bg.bulletName == transform.gameObject.name)
-                {
-                    bg.collection.Add(transform.gameObject);
-                    transform.gameObject.SetActive(false);
-                }
-                else
-                {
-                    int count = GameManager.gm.bullets.Count;
-                    GameManager.gm.bullets.Add(new BulletGarbge());
-                    GameManager.gm.bullets[count].bulletName = transform.gameObject.name;
-                    GameManager.gm.bullets[count].collection.Add(transform.gameObject);
-                    transform.gameObject.SetActive(false);
-                }
-            }
-        }*/
-
+        //if (GameManager.gm.bullets.Count == 0)
+        //{
+        //    GameManager.gm.bullets.Add(new BulletGarbge());
+        //    GameManager.gm.bullets[0].bulletName = transform.gameObject.name;
+        //    GameManager.gm.bullets[0].collection.Add(transform.gameObject);
+        //    transform.gameObject.SetActive(false);
+        //}
+        //else
+        //{
+        //    foreach (BulletGarbge bg in GameManager.gm.bullets.ToArray())
+        //    {
+        //        if (bg.bulletName == transform.gameObject.name)
+        //        {
+        //            bg.collection.Add(transform.gameObject);
+        //            transform.gameObject.SetActive(false);
+        //        }
+        //        else
+        //        {
+        //            int count = GameManager.gm.bullets.Count;
+        //            GameManager.gm.bullets.Add(new BulletGarbge());
+        //            GameManager.gm.bullets[count].bulletName = transform.gameObject.name;
+        //            GameManager.gm.bullets[count].collection.Add(transform.gameObject);
+        //            transform.gameObject.SetActive(false);
+        //        }
+        //    }
+        //}
         Destroy(this.gameObject);
     }
 

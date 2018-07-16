@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReJet", "ReJet.csproj", "{A1F71901-004B-13AB-29D2-858D40610A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReJet.Editor", "ReJet.Editor.csproj", "{419B6272-6838-592C-810E-7B0D34F55362}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReJet.Editor", "ReJet.Editor.csproj", "{419B6272-6838-592C-810E-7B0D34F55362}"
 EndProject
@@ -21,11 +21,12 @@ Global
 		{419B6272-6838-592C-810E-7B0D34F55362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{419B6272-6838-592C-810E-7B0D34F55362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{419B6272-6838-592C-810E-7B0D34F55362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419B6272-6838-592C-810E-7B0D34F55362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419B6272-6838-592C-810E-7B0D34F55362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419B6272-6838-592C-810E-7B0D34F55362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419B6272-6838-592C-810E-7B0D34F55362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9BF1C697-C653-4FC1-98B5-E91399510070}
 	EndGlobalSection
 EndGlobal
