@@ -14,7 +14,7 @@ public class Monsters : MonoBehaviour
     {
         GameManager.gm.NameReplace(transform.gameObject);
         InvokeRepeating("InstBullet",1f,2f);
-        Invoke("CancelInvoke",lastingtime);
+        
     }
     // Update is called once per frame
     void Update()
@@ -22,6 +22,10 @@ public class Monsters : MonoBehaviour
 
     }
 
+    private void OnDisable()
+    {
+        Invoke("CancelInvoke",0f);
+    }
     void ApplyDamage(float ap)
     {
         healthPoint -= ap;

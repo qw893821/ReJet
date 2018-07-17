@@ -10,7 +10,7 @@ public class MeteorSpawner : MonoBehaviour {
 	}
 	void Awake()
     {
-        InvokeRepeating("Spawn",0.5f,0.3f);
+        
         
     }
 	// Update is called once per frame
@@ -27,9 +27,12 @@ public class MeteorSpawner : MonoBehaviour {
         if (!this.gameObject.activeSelf)
         {
             Invoke("CancelInvoke",0f);
-            Debug.Log("stop spawn");
         }
-        else { Debug.Log("Start spawn"); }
        
+    }
+
+    private void OnEnable()
+    {
+        InvokeRepeating("Spawn", 0.5f, 0.3f);
     }
 }

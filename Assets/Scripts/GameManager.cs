@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour {
     GarbgeCheck gc;
     public GameObject explision_Anim;
 
+    public GameObject explosionSoundEffect;
+
     
     
     // Use this for initialization
@@ -38,7 +40,11 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Input.GetKeyDown("j"))
+        {
+            explosionSoundEffect.GetComponent<AudioSource>().Play(0);
+            Debug.Log("play sound");
+        }
 	}
 
     private void LateUpdate()

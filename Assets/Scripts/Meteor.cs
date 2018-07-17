@@ -32,7 +32,6 @@ public class Meteor : MonoBehaviour {
         if (other.tag == "Player")
         {
             Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
-            Debug.Log("col");
         }
     }
 }

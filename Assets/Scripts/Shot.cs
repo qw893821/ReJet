@@ -66,7 +66,6 @@ public class Shot : MonoBehaviour {
             else
             {
                 Instantiate(bullet, transform.position, Quaternion.identity);
-                Debug.Log("no same");
             }
             timer = 0;
         }

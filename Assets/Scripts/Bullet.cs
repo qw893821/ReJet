@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour {
     float timer;
 	// Use this for initialization
 	void Start () {
-        speed = 5f;
-        
+        speed = 8.0f;
 	}
 
     
@@ -19,6 +18,7 @@ public class Bullet : MonoBehaviour {
     {
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
     }
+
     // Update is called once per frame
     void Update () {
         BulletMove();
@@ -46,43 +46,56 @@ public class Bullet : MonoBehaviour {
     {
         if (GameManager.gm.bullets.Count == 0)
         {
-            GameManager.gm.bullets.Add(new BulletGarbge());
-            GameManager.gm.bullets[0].bulletName = transform.gameObject.name;
-            GameManager.gm.bullets[0].collection.Add(transform.gameObject);
-            transform.gameObject.SetActive(false);
+            CreateBulletCollection(0);
         }
         else
         {
-            foreach (BulletGarbge bg in GameManager.gm.bullets.ToArray())
+            GarbageReuse();
+        }
+    }
+
+    //create the new bullet garbage
+    void CreateBulletCollection(int c)
+    {
+        GameManager.gm.bullets.Add(new BulletGarbge());
+        GameManager.gm.bullets[c].bulletName = transform.gameObject.name;
+        GameManager.gm.bullets[c].collection.Add(transform.gameObject);
+        transform.gameObject.SetActive(false);
+    }
+
+    //when there is a matched garbage collection, take from the collection
+    void GarbageReuse()
+    {
+        foreach (BulletGarbge bg in GameManager.gm.bullets)
+        {
+            if (bg.bulletName == transform.gameObject.name)
             {
-                if (bg.bulletName == transform.gameObject.name)
-                {
 
-                    bg.collection.Add(transform.gameObject);
-                    transform.gameObject.SetActive(false);
-                }
-                else
-                {
-                    int count = GameManager.gm.bullets.Count;
-                    GameManager.gm.bullets.Add(new BulletGarbge());
-                    GameManager.gm.bullets[count].bulletName = transform.gameObject.name;
-                    GameManager.gm.bullets[count].collection.Add(transform.gameObject);
-                    transform.gameObject.SetActive(false);
-
-                }
+                bg.collection.Add(transform.gameObject);
+                transform.gameObject.SetActive(false);
+            }
+            else
+            {
+                int count = GameManager.gm.bullets.Count;
+                CreateBulletCollection(count - 1);
             }
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("enter");
         if (col.tag == "Monster")
         {
-            col.gameObject.SendMessage("ApplyDamage", attackPower);
-            SelfDisable();
+            BulletHit(col);
         }
     }
     
+    void BulletHit(Collider2D col)
+    {
+        col.gameObject.SendMessage("ApplyDamage", attackPower);
+        SelfDisable();
+        Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+    }
     
 }
