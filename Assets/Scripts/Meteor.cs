@@ -8,9 +8,13 @@ public class Meteor : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        SelfDestroy();
+    }
+    // Update is called once per frame
+    void Update () {
         Movement();
 	}
 
@@ -33,5 +37,10 @@ public class Meteor : MonoBehaviour {
         {
             Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
         }
+    }
+
+    void SelfDestroy()
+    {
+        Destroy(this.gameObject,5f);
     }
 }

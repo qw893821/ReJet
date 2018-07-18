@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown("j"))
         {
+            //should ccreate an instance to play the music
             explosionSoundEffect.GetComponent<AudioSource>().Play(0);
-            Debug.Log("play sound");
+            
         }
 	}
 

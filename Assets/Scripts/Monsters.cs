@@ -7,7 +7,6 @@ public class Monsters : MonoBehaviour
     public GameObject bullet;
     public float healthPoint;
     public float lastingtime;
-    public  GameObject newBullet;
     // Use this for initialization
 
     private void Awake()
