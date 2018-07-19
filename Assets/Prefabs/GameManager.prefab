@@ -53,5 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explision_Anim: {fileID: 1020444002307062, guid: 47eff907caa99e54b9d7206e58a03de0,
     type: 2}
-  explosionSoundEffect: {fileID: 1103267396441016, guid: 253082808fae30a41a295bbc88988509,
-    type: 2}
+  explosionSoundEffect: {fileID: 0}

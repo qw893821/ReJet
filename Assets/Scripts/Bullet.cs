@@ -5,22 +5,31 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
     float speed;
     //attack power of the bullet;
-    public float attackPower;
+    public float basicPower;
+    //float attackPower;
     //self disable timer;
     float timer;
-	// Use this for initialization
-	void Start () {
-        speed = 8.0f;
-	}
 
-    
+    //power modfier
+    public float fixed_PowerMod;
+    public float temp_PowerMod;
+    float tempModTimer;
+    // Use this for initialization
+    void Start() {
+        speed = 8.0f;
+        temp_PowerMod = 1.0f;
+        fixed_PowerMod = 1.0f;
+        tempModTimer = 5.0f;
+    }
+
+
     private void Awake()
     {
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
         BulletMove();
         timer += Time.deltaTime;
         {
@@ -38,7 +47,7 @@ public class Bullet : MonoBehaviour {
 
     void BulletMove()
     {
-        transform.position += new Vector3(speed,0,0f)*Time.deltaTime;
+        transform.position += new Vector3(speed, 0, 0f) * Time.deltaTime;
     }
 
     //bullet last a peroid of time
@@ -90,12 +99,32 @@ public class Bullet : MonoBehaviour {
             BulletHit(col);
         }
     }
-    
+
     void BulletHit(Collider2D col)
     {
-        col.gameObject.SendMessage("ApplyDamage", attackPower);
+        col.gameObject.SendMessage("ApplyDamage", PowerMod());
         SelfDisable();
         Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
     }
-    
+
+    float PowerMod()
+    {
+        float moderate = 1.0f;
+        float attackPower;
+        moderate *= fixed_PowerMod * temp_PowerMod;
+        attackPower = moderate * basicPower;
+        return attackPower;
+    }
+
+    public void TempPowerUp()
+    {
+        StartCoroutine(TPowerUp());
+    }
+
+    IEnumerator TPowerUp()
+    {
+        temp_PowerMod = 2.0f;
+        yield return new WaitForSeconds(tempModTimer);
+        temp_PowerMod = 1.0f;
+    }
 }

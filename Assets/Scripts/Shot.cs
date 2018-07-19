@@ -72,5 +72,8 @@ public class Shot : MonoBehaviour {
         
     }
 
-    
+    void TempPowerUP()
+    {
+        bullet.GetComponent<Bullet>().TempPowerUp();
+    }
 }

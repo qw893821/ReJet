@@ -7,13 +7,14 @@ public class Monsters : MonoBehaviour
     public GameObject bullet;
     public float healthPoint;
     public float lastingtime;
+    bool died;
     // Use this for initialization
 
     private void Awake()
     {
         GameManager.gm.NameReplace(transform.gameObject);
         InvokeRepeating("InstBullet",1f,2f);
-        
+        died = false;
     }
     // Update is called once per frame
     void Update()
@@ -36,7 +37,10 @@ public class Monsters : MonoBehaviour
     {
         if (healthPoint <= 0)
         {
-            Destroy(this.gameObject);
+            Hiden();
+            GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
+            Invoke("CancelInvoke", 0f);
+            Destroy(this.gameObject,2f);
         }
     }
 
@@ -73,8 +77,15 @@ public class Monsters : MonoBehaviour
         //    bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
         //    Debug.Log("no found");
         //}
-
-
     }
 
+    void Hiden()
+    {
+        transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        foreach(SpriteRenderer sr in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = false;
+        }
+        
+    }
 }

@@ -40,12 +40,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("j"))
-        {
-            //should ccreate an instance to play the music
-            explosionSoundEffect.GetComponent<AudioSource>().Play(0);
-            
-        }
+        
 	}
 
     private void LateUpdate()
