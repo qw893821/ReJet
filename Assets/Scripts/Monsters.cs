@@ -9,12 +9,16 @@ public class Monsters : MonoBehaviour
     public float lastingtime;
     bool died;
     // Use this for initialization
+    private void Start()
+    {
+        GameManager.gm.NameReplace(transform.gameObject);
+        InvokeRepeating("InstBullet", 1f, 2f);
+        //died = false;
+    }
 
     private void Awake()
     {
-        GameManager.gm.NameReplace(transform.gameObject);
-        InvokeRepeating("InstBullet",1f,2f);
-        died = false;
+        
     }
     // Update is called once per frame
     void Update()
@@ -37,6 +41,7 @@ public class Monsters : MonoBehaviour
     {
         if (healthPoint <= 0)
         {
+            Instantiate(GameManager.gm.power_Loot,transform.position,Quaternion.identity);
             Hiden();
             GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
             Invoke("CancelInvoke", 0f);

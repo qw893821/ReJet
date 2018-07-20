@@ -23,8 +23,11 @@ public class GameManager : MonoBehaviour {
 
     public GameObject explosionSoundEffect;
 
-    
-    
+    GameObject player;
+    public Shot shot;
+
+    // loot go
+    public GameObject power_Loot;
     // Use this for initialization
     void Start () {
         if (!_gm)
@@ -34,7 +37,8 @@ public class GameManager : MonoBehaviour {
         else
         { Destroy(this); }
         bullets = new List<BulletGarbge>();
-
+        player = GameObject.Find("Player");
+        shot = player.GetComponent<Shot>();
         gc = new GarbgeCheck();
 	}
 	

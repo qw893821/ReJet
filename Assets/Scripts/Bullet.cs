@@ -6,26 +6,28 @@ public class Bullet : MonoBehaviour {
     float speed;
     //attack power of the bullet;
     public float basicPower;
+    public float attackPower;
     //float attackPower;
     //self disable timer;
     float timer;
-
     //power modfier
     public float fixed_PowerMod;
-    public float temp_PowerMod;
+    //public float temp_PowerMod;
     float tempModTimer;
     // Use this for initialization
     void Start() {
         speed = 8.0f;
-        temp_PowerMod = 1.0f;
+        //temp_PowerMod = 1.0f;
+        attackPower = basicPower;
         fixed_PowerMod = 1.0f;
         tempModTimer = 5.0f;
+        transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
     }
 
-
+    
     private void Awake()
     {
-        transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
+        
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class Bullet : MonoBehaviour {
     {
         timer = 0f;
     }
-
+    
     void BulletMove()
     {
         transform.position += new Vector3(speed, 0, 0f) * Time.deltaTime;
@@ -102,29 +104,21 @@ public class Bullet : MonoBehaviour {
 
     void BulletHit(Collider2D col)
     {
-        col.gameObject.SendMessage("ApplyDamage", PowerMod());
+        col.gameObject.SendMessage("ApplyDamage", attackPower);
         SelfDisable();
         Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
     }
 
-    float PowerMod()
+    void SetProperity(float mod)
     {
-        float moderate = 1.0f;
-        float attackPower;
-        moderate *= fixed_PowerMod * temp_PowerMod;
-        attackPower = moderate * basicPower;
-        return attackPower;
+        attackPower = PromotePower(mod);
+        transform.position = GameManager.gm.shot.transform.position;
     }
 
-    public void TempPowerUp()
+    float PromotePower(float mod)
     {
-        StartCoroutine(TPowerUp());
-    }
-
-    IEnumerator TPowerUp()
-    {
-        temp_PowerMod = 2.0f;
-        yield return new WaitForSeconds(tempModTimer);
-        temp_PowerMod = 1.0f;
+        float ap;
+        ap = basicPower * fixed_PowerMod * mod;
+        return ap;
     }
 }

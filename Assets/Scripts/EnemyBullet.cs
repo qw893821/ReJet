@@ -11,16 +11,17 @@ public class EnemyBullet : MonoBehaviour {
     float timer;
 	// Use this for initialization
 	void Awake () {
-        transform.gameObject.name=GameManager.gm.NameReplace(transform.gameObject);
+        player = GameObject.Find("Player");
+    }
+    private void Start()
+    {
+        transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
 
         speed = 5f;
-        player = GameObject.Find("Player");
         
-
     }
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         BulletMove();
         timer += Time.deltaTime;
         if (timer >= 5f)

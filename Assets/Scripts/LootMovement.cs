@@ -33,11 +33,20 @@ public class LootMovement : MonoBehaviour {
         switch (lType)
         {
             case LootType.power:
-                go.SendMessage("TempPowerUP");
+                go.SendMessage("PowerUpCounter");
                 break;
             case LootType.gold:
                 go.SendMessage("GoldUP");
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Promote(collision.transform.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

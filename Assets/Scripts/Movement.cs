@@ -35,22 +35,6 @@ public class Movement : MonoBehaviour {
     {
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
-            //if (transform.position.x <= -8.5 && x < 0)
-            //{
-            //    x = 0;
-            //}
-            //else if (transform.position.x >= 8.5 && x > 0)
-            //{
-            //    x = 0;
-            //}
-            //if (transform.position.y < -4.5 && y < 0)
-            //{
-            //    y = 0;
-            //}
-            //else if (transform.position.y > 4.5 && y > 0)
-            //{
-            //    y = 0;
-            //}
             speed = SpeedUP(speed);
         }
         else
@@ -70,15 +54,5 @@ public class Movement : MonoBehaviour {
             s = maxSpeed;
         }
         return s;
-    }
-
-    
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Loot")
-        {
-            collision.gameObject.SendMessage("Promote",transform.gameObject);
-        }
     }
 }
