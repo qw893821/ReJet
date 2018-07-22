@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour {
     Vector3 target;
     GameObject player;
     Vector2 dir;
+    public float attackPower;
     //enemy bullet disable timer
     float timer;
 	// Use this for initialization
@@ -78,6 +79,7 @@ public class EnemyBullet : MonoBehaviour {
         if (collision.tag == "Player")
         {
             Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
+            collision.transform.gameObject.SendMessage("Damaged",attackPower);
         }
     }
 }

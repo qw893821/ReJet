@@ -13,14 +13,14 @@ public class Bullet : MonoBehaviour {
     //power modfier
     public float fixed_PowerMod;
     //public float temp_PowerMod;
-    float tempModTimer;
+    //float tempModTimer;
     // Use this for initialization
     void Start() {
         speed = 8.0f;
         //temp_PowerMod = 1.0f;
         attackPower = basicPower;
         fixed_PowerMod = 1.0f;
-        tempModTimer = 5.0f;
+        //tempModTimer = 5.0f;
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
     }
 
