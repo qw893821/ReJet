@@ -6,19 +6,22 @@ public class Movement : MonoBehaviour {
     float speed;
     float maxSpeed;
     float speedUPRate;
+    public Sprite flight_default, flight_up, flight_down;
+    SpriteRenderer playerSR;
 	// Use this for initialization
 	void Start () {
         speed = 0f;
         maxSpeed = 5.0f;
         speedUPRate = 15.0f;
+        playerSR=transform.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        float h, v;
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        Move(h,v);
+        float hori, vert;
+        hori = Input.GetAxisRaw("Horizontal");
+        vert = Input.GetAxisRaw("Vertical");
+        Move(hori, vert);
 	}
 
     void Move(float x,float y)
@@ -29,6 +32,7 @@ public class Movement : MonoBehaviour {
         pos = transform.position;
         target = pos+ new Vector2(x,y).normalized;
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        MovingSprite(y);
     }
 
     void MoveDirectionInput(float x, float y)
@@ -54,5 +58,18 @@ public class Movement : MonoBehaviour {
             s = maxSpeed;
         }
         return s;
+    }
+
+    void MovingSprite(float y)
+    {
+        if (y > 0)
+        {
+            playerSR.sprite = flight_up;
+        }
+        else if (y < 0)
+        {
+            playerSR.sprite = flight_down;
+        }
+        else { playerSR.sprite = flight_default; }
     }
 }
