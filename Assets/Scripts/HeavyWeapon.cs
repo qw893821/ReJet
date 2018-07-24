@@ -13,11 +13,13 @@ public class HeavyWeapon : MonoBehaviour {
     public float setTime;
     public float speed;
     GameObject target;
+    public float attackPower;
 	// Use this for initialization
 	void Start () {
         setRate = 1.0f;
         target = GetTarget();
         StartCoroutine(Movement());
+        StartCoroutine(SelfDisable());
 	}
 	
 	// Update is called once per frame
@@ -74,8 +76,7 @@ public class HeavyWeapon : MonoBehaviour {
         {
             transform.position = Vector2.MoveTowards(transform.position,target.transform.position,speed*Time.deltaTime);
             transform.rotation = Quaternion.LookRotation(transform.forward, transform.position- target.transform.position);
-            transform.rotation *= Quaternion.Euler(0,0,-90.0f);
-            Debug.Log("find target");
+            transform.rotation *= Quaternion.Euler(0, 0, -90.0f);
         }
         else
         {
@@ -88,5 +89,22 @@ public class HeavyWeapon : MonoBehaviour {
     {
         //attackPower = PromotePower(mod);
         transform.position = GameManager.gm.shot.transform.position;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Monster")
+        {
+                other.gameObject.SendMessage("ApplyDamage", attackPower);
+                Debug.Log("missile hit");
+                Destroy(this.gameObject);
+        }   
+    }
+
+    IEnumerator SelfDisable()
+    {
+
+        yield return new WaitForSeconds(5f);
+        Destroy(this.gameObject);
     }
 }

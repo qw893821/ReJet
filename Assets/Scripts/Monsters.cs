@@ -30,6 +30,7 @@ public class Monsters : MonoBehaviour
     {
         Invoke("CancelInvoke",0f);
     }
+
     void ApplyDamage(float ap)
     {
         healthPoint -= ap;

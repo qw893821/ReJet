@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour {
     public GameObject bullet;
+    public GameObject heavyWeapon;
     //bullet shoot speed when press and hold button
     float time = 0.2f;
     float timer;
@@ -29,12 +30,14 @@ public class Shot : MonoBehaviour {
             timer += Time.deltaTime;
             if (timer >= time)
             {
-                InstBullet();
+                InstBullet(bullet);
+                InstBullet(heavyWeapon);
             }
         }
         if (Input.GetKeyDown("j"))
         {
-            InstBullet();
+            InstBullet(bullet);
+            InstBullet(heavyWeapon);
         }
         
     }
@@ -59,30 +62,30 @@ public class Shot : MonoBehaviour {
     //    }
     //}
 
-    void InstBullet()
+    void InstBullet(GameObject weapongo)
     {
-        if (GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).isCreated)
+        if (GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).isCreated)
         {
             int count;
-            count = GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection.Count;
+            count = GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection.Count;
             if ( count== 0)
             {
                 GameObject go;
-                go=Instantiate(bullet/*, transform.position, Quaternion.identity*/);
+                go=Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
                 go.SendMessage("SetProperity",tempPowerMod);
             }
             else
             {
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[count-1].SetActive(true);
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[count-1].SendMessage("SetProperity",tempPowerMod);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count-1].SetActive(true);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count-1].SendMessage("SetProperity",tempPowerMod);
                 //GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[0].transform.position = transform.position;
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection.RemoveAt(count-1);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection.RemoveAt(count-1);
             }
         }
         else
         {
             GameObject go;
-            go = Instantiate(bullet/*, transform.position, Quaternion.identity*/);
+            go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
             go.SendMessage("SetProperity", tempPowerMod);
         }
         timer = 0;
