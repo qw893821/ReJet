@@ -42,10 +42,10 @@ public class Monsters : MonoBehaviour
         if (healthPoint <= 0)
         {
             Instantiate(GameManager.gm.power_Loot,transform.position,Quaternion.identity);
-            Hiden();
+            //Hiden();
             GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
             Invoke("CancelInvoke", 0f);
-            Destroy(this.gameObject,2f);
+            transform.gameObject.SetActive(false);
         }
     }
 

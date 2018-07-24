@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
 
     GameObject player;
     public Shot shot;
-
+    public GameObject boundary1, boundary2;
     // loot go
     public GameObject power_Loot;
     // Use this for initialization
@@ -40,12 +40,13 @@ public class GameManager : MonoBehaviour {
         player = GameObject.Find("Player");
         shot = player.GetComponent<Shot>();
         gc = new GarbgeCheck();
+        InvokeRepeating("MoveBoundary",0.5f,0.1f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
-	}
+       
+    }
 
     private void LateUpdate()
     {
@@ -93,5 +94,23 @@ public class GameManager : MonoBehaviour {
     {
         Destroy(go,time);
         yield return null;
+    }
+
+    IEnumerator BoundaryShifter(GameObject go)
+    {
+        if (go.transform.position.x <= -17.0f)
+        {
+            go.transform.Translate(new Vector3(17.0f,0,0));
+        }
+        else {//x -18 to make sure boundary will move more than -17f
+            go.transform.position = Vector3.MoveTowards(go.transform.position,new Vector3(-18.0f, 0, 0),1f*Time.deltaTime);
+        }
+        yield return /*new WaitForSeconds(0.1f);*/null;
+    }
+
+    void MoveBoundary()
+    {
+        StartCoroutine(BoundaryShifter(boundary1));
+        StartCoroutine(BoundaryShifter(boundary2));
     }
 }

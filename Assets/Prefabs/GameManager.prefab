@@ -55,4 +55,6 @@ MonoBehaviour:
     type: 2}
   explosionSoundEffect: {fileID: 0}
   shot: {fileID: 0}
+  boundary1: {fileID: 0}
+  boundary2: {fileID: 0}
   power_Loot: {fileID: 1588554325788938, guid: 40da678be135c42498f59cf25c5ead9b, type: 2}
