@@ -32,8 +32,8 @@ public class HeavyWeapon : MonoBehaviour {
         Vector2 lunchPos;
         Vector2 goPos;
         goPos = transform.position;
-        lunchPos = goPos + new Vector2(0,1.0f);
-        transform.position = Vector2.MoveTowards(transform.position,lunchPos,1.0f*Time.deltaTime);
+        lunchPos = goPos + new Vector2(0,1.5f);
+        transform.position = Vector2.MoveTowards(transform.position,lunchPos,1.5f*Time.deltaTime);
     }
 
     float SetTime()
@@ -43,10 +43,10 @@ public class HeavyWeapon : MonoBehaviour {
 
     IEnumerator Movement()
     {
-        InvokeRepeating("Launch",0f,0.1f);
+        InvokeRepeating("Launch",0f,0.03f);
         yield return new WaitForSeconds(SetTime());
         CancelInvoke();
-        InvokeRepeating("MoveTowardTarget",0f,0.1f);
+        InvokeRepeating("MoveTowardTarget",0f,0.03f);
     }
 
     GameObject GetTarget()
