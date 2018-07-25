@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114334590757210276}
   - component: {fileID: 61054029548169654}
   - component: {fileID: 50187883008426982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Beam
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -99,9 +99,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a6694e1be5a004ab6f7ef19ee478d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicPower: 10
-  fixed_PowerMod: 0
-  temp_PowerMod: 0
+  basicAttackPower: 10
+  attackPower: 0
+  speed: 8
+  selfDestroyTimer: 0
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 1
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!212 &212854430136939796
 SpriteRenderer:
   m_ObjectHideFlags: 1

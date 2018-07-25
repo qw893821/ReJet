@@ -32,6 +32,7 @@ public class Shot : MonoBehaviour {
             {
                 InstBullet(bullet);
                 InstBullet(heavyWeapon);
+
             }
         }
         if (Input.GetKeyDown("j"))
@@ -68,18 +69,18 @@ public class Shot : MonoBehaviour {
         {
             int count;
             count = GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection.Count;
-            if ( count== 0)
+            if (count == 0)
             {
                 GameObject go;
-                go=Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
-                go.SendMessage("SetProperity",tempPowerMod);
+                go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
+                go.SendMessage("SetProperity", tempPowerMod);
             }
             else
             {
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count-1].SetActive(true);
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count-1].SendMessage("SetProperity",tempPowerMod);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count - 1].SetActive(true);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection[count - 1].SendMessage("SetProperity", tempPowerMod);
                 //GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).garbgeIndex].collection[0].transform.position = transform.position;
-                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection.RemoveAt(count-1);
+                GameManager.gm.bullets[GameManager.gm.GarbageFind(GameManager.gm.bullets, weapongo, weapongo.name).garbgeIndex].collection.RemoveAt(count - 1);
             }
         }
         else

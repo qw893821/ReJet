@@ -5,19 +5,20 @@ using UnityEngine;
 public class Bullet : Weapon {
     //float attackPower;
     //self disable timer;
-    float selfDisableTimer;
     //power modfier
-    public float fixed_PowerMod;
     //public float temp_PowerMod;
     //float tempModTimer;
     // Use this for initialization
+    
+
+    //weapon w/o track ability will not require target 
     void Start() {
-        speed = 8.0f;
         //temp_PowerMod = 1.0f;
         attackPower = basicAttackPower;
-        fixed_PowerMod = 1.0f;
         //tempModTimer = 5.0f;
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
+        StartCoroutine(Movement());
+        StartCoroutine(SelfDisable());
     }
 
     
@@ -28,19 +29,35 @@ public class Bullet : Weapon {
 
     // Update is called once per frame
     void Update() {
-        BulletMove();
-        selfDisableTimer += Time.deltaTime;
-        {
-            if (selfDisableTimer >= 5f)
-            {
-                SelfDisable();
-            }
-        }
+        //BulletMove();
+        //selfDestroyTimer += Time.deltaTime;
+        //{
+        //    if (selfDestroyTimer >= selfDestroyTime)
+        //    {
+        //        SelfDisable();
+        //    }
+        //}
+    }
+
+    public override void Launch()
+    {
+        Vector2 lunchPos;
+        Vector2 goPos;
+        goPos = transform.position;
+        lunchPos = goPos + new Vector2(speed, 0f);
+        transform.position = Vector2.MoveTowards(transform.position, lunchPos, speed * Time.deltaTime);
+    }
+
+    public override IEnumerator Movement()
+    {
+        InvokeRepeating("Launch", 0f, 0.03f);
+        yield return null;
     }
 
     private void OnEnable()
     {
-        selfDisableTimer = 0f;
+        selfDestroyTimer = 0f;
+
     }
     
     void BulletMove()
@@ -49,17 +66,17 @@ public class Bullet : Weapon {
     }
 
     //bullet last a peroid of time
-    void SelfDisable()
-    {
-        if (GameManager.gm.bullets.Count == 0)
-        {
-            CreateBulletCollection(0);
-        }
-        else
-        {
-            GarbageReuse();
-        }
-    }
+    //void SelfDisable()
+    //{
+    //    if (GameManager.gm.bullets.Count == 0)
+    //    {
+    //        CreateBulletCollection(0);
+    //    }
+    //    else
+    //    {
+    //        GarbageReuse();
+    //    }
+    //}
 
     //create the new bullet garbage
     void CreateBulletCollection(int c)
@@ -94,27 +111,22 @@ public class Bullet : Weapon {
     {
         if (col.tag == "Monster")
         {
-            BulletHit(col);
+            BulletHit(col, "vuln");
+        }
+        else
+        {
+            GameObject go;
+            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+            go.SendMessage("ChangeSprite", "invuln");
         }
     }
 
-    void BulletHit(Collider2D col)
+    void BulletHit(Collider2D col,string typeName)
     {
         col.gameObject.SendMessage("ApplyDamage", attackPower);
         SelfDisable();
-        Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-    }
-
-    void SetProperity(float mod)
-    {
-        attackPower = PromotePower(mod);
-        transform.position = GameManager.gm.shot.transform.position;
-    }
-
-    float PromotePower(float mod)
-    {
-        float ap;
-        ap = basicAttackPower * fixed_PowerMod * mod;
-        return ap;
+        GameObject go;
+        go=Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+        go.SendMessage("ChangeSprite",typeName);
     }
 }

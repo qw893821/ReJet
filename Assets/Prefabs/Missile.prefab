@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61472443312885278}
   - component: {fileID: 114014680612378068}
   - component: {fileID: 50905039188742188}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Missile
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -99,9 +99,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32a28dc09a84234a8022b7d1b33bc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setTime: 1
-  speed: 10
+  basicAttackPower: 10
   attackPower: 20
+  speed: 10
+  selfDestroyTimer: 0
+  selfDestroyTime: 3
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 1
+  targetMissing: 0
+  setTime: 1
+  setRate: 1
 --- !u!212 &212724095070165426
 SpriteRenderer:
   m_ObjectHideFlags: 1
