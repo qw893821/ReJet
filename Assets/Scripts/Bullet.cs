@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
-    float speed;
-    //attack power of the bullet;
-    public float basicPower;
-    public float attackPower;
+public class Bullet : Weapon {
     //float attackPower;
     //self disable timer;
-    float timer;
+    float selfDisableTimer;
     //power modfier
     public float fixed_PowerMod;
     //public float temp_PowerMod;
@@ -18,7 +14,7 @@ public class Bullet : MonoBehaviour {
     void Start() {
         speed = 8.0f;
         //temp_PowerMod = 1.0f;
-        attackPower = basicPower;
+        attackPower = basicAttackPower;
         fixed_PowerMod = 1.0f;
         //tempModTimer = 5.0f;
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
@@ -33,9 +29,9 @@ public class Bullet : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         BulletMove();
-        timer += Time.deltaTime;
+        selfDisableTimer += Time.deltaTime;
         {
-            if (timer >= 5f)
+            if (selfDisableTimer >= 5f)
             {
                 SelfDisable();
             }
@@ -44,7 +40,7 @@ public class Bullet : MonoBehaviour {
 
     private void OnEnable()
     {
-        timer = 0f;
+        selfDisableTimer = 0f;
     }
     
     void BulletMove()
@@ -118,7 +114,7 @@ public class Bullet : MonoBehaviour {
     float PromotePower(float mod)
     {
         float ap;
-        ap = basicPower * fixed_PowerMod * mod;
+        ap = basicAttackPower * fixed_PowerMod * mod;
         return ap;
     }
 }

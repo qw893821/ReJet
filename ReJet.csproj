@@ -310,8 +310,8 @@
     <Compile Include="Assets\Scripts\BulletGarbge.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Explision.cs" />
+    <Compile Include="Assets\Scripts\FollowMissile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\HeavyWeapon.cs" />
     <Compile Include="Assets\Scripts\LootMovement.cs" />
     <Compile Include="Assets\Scripts\Meteor.cs" />
     <Compile Include="Assets\Scripts\MeteorSpawner.cs" />
@@ -320,6 +320,7 @@
     <Compile Include="Assets\Scripts\PlayerAction.cs" />
     <Compile Include="Assets\Scripts\SelfDestroyerEditor.cs" />
     <Compile Include="Assets\Scripts\Shot.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\ShieldShader.shader" />

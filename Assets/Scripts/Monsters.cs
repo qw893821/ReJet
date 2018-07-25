@@ -7,7 +7,7 @@ public class Monsters : MonoBehaviour
     public GameObject bullet;
     public float healthPoint;
     public float lastingtime;
-    bool died;
+    public bool died;
     // Use this for initialization
     private void Start()
     {
@@ -42,11 +42,12 @@ public class Monsters : MonoBehaviour
     {
         if (healthPoint <= 0)
         {
+            died = true;
             Instantiate(GameManager.gm.power_Loot,transform.position,Quaternion.identity);
             Hiden();
             GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
             Invoke("CancelInvoke", 0f);
-            //transform.gameObject.SetActive(false);
+            transform.gameObject.SetActive(false);
         }
     }
 

@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour {
-    float speed;
-    Vector3 target;
+public class EnemyBullet : Weapon {
     GameObject player;
     Vector2 dir;
-    public float attackPower;
     //enemy bullet disable timer
-    float timer;
+    float selfDisableTimer;
 	// Use this for initialization
 	void Awake () {
         player = GameObject.Find("Player");
@@ -24,8 +21,8 @@ public class EnemyBullet : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         BulletMove();
-        timer += Time.deltaTime;
-        if (timer >= 5f)
+        selfDisableTimer += Time.deltaTime;
+        if (selfDisableTimer >= 5f)
         {
             SelfDisable();
         }
@@ -39,8 +36,8 @@ public class EnemyBullet : MonoBehaviour {
 
     public void SetProperity()
     {
-        target = player.transform.position;
-        dir = (target - transform.position).normalized;
+        target = player;
+        dir = (target.transform.position - transform.position).normalized;
     }
 
     void SelfDisable()
@@ -79,7 +76,7 @@ public class EnemyBullet : MonoBehaviour {
         if (collision.tag == "Player")
         {
             Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
-            collision.transform.gameObject.SendMessage("Damaged",attackPower);
+            collision.transform.gameObject.SendMessage("Damaged",basicAttackPower);
         }
     }
 }
