@@ -14,6 +14,7 @@ public class Shot : MonoBehaviour {
     float tempPowerUpTime;
     public float tempPowerMod;
 
+    bool heavyReady;
     private void Awake()
     {
         bulletattackSpeed = bullet.GetComponent<Bullet>().attackSpeed;
@@ -21,6 +22,7 @@ public class Shot : MonoBehaviour {
     }
     private void Start()
     {
+        heavyReady = false;
         bulletTimer=0;
         heavyTimer=0;
         tempPowerUpTime = 5.0f;
@@ -35,19 +37,22 @@ public class Shot : MonoBehaviour {
     //fire bullet
     void Fire()
     {
-        //if (Input.GetKey("j"))
-        //{
-            
-        //}
+        heavyReady = HeavryWeaponCheck();
+        if (Input.GetKey("j"))
+        {
+            HeavyWeaponInster();
+        }
         if (Input.GetKeyDown("j"))
         {
+            InstBullet(bullet);
+            //InstBullet(heavyWeapon);
             InvokeRepeating("BulletInster",0f,0.016f);
-            InvokeRepeating("HeavyWeaponInster", 0f, 0.016f);
+            //InvokeRepeating("HeavyWeaponInster", 0f, 0.016f);
         }
         else if (Input.GetKeyUp("j"))
         {
             CancelInvoke("BulletInster");
-            CancelInvoke("HeavyWeaponInster");
+            //CancelInvoke("HeavyWeaponInster");
         }
     }
 
@@ -118,11 +123,28 @@ public class Shot : MonoBehaviour {
 
     void HeavyWeaponInster()
     {
-        heavyTimer += Time.deltaTime;
-        if (heavyTimer >= heavyattackSpeed)
+        if (heavyReady)
         {
             InstBullet(heavyWeapon);
-            heavyTimer = 0;
+            heavyReady = false;
         }
+    }
+
+    bool HeavryWeaponCheck()
+    {
+        if (!heavyReady)
+        {
+            heavyTimer += Time.deltaTime;
+            if (heavyTimer >= heavyattackSpeed)
+            {
+                heavyTimer = 0;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
