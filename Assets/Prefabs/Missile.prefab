@@ -104,7 +104,7 @@ MonoBehaviour:
   speed: 10
   selfDestroyTimer: 0
   selfDestroyTime: 3
-  attackSpeed: 0
+  attackSpeed: 3
   target: {fileID: 0}
   fixed_PowerMod: 1
   targetMissing: 0

@@ -109,24 +109,40 @@ public class Bullet : Weapon {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        //if (col.tag == "Monster")
+        //{
+        //    BulletHit(col, "vuln");
+        //}
+        //else
+        //{
+        //    GameObject go;
+        //    go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+        //    go.SendMessage("ChangeSprite", "invuln");
+        //}
+        BulletHit(col);
+    }
+
+    void BulletHit(Collider2D col/*,string typeName*/)
+    {
+        //col.gameObject.SendMessage("ApplyDamage", attackPower);
+        //SelfDisable();
+        //GameObject go;
+        //go=Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+        //go.SendMessage("ChangeSprite",typeName);
         if (col.tag == "Monster")
         {
-            BulletHit(col, "vuln");
+            col.gameObject.SendMessage("ApplyDamage", attackPower);
+            SelfDisable();
+            GameObject go;
+            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+            go.SendMessage("ChangeSprite", "vuln");
         }
         else
         {
+            SelfDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
             go.SendMessage("ChangeSprite", "invuln");
         }
-    }
-
-    void BulletHit(Collider2D col,string typeName)
-    {
-        col.gameObject.SendMessage("ApplyDamage", attackPower);
-        SelfDisable();
-        GameObject go;
-        go=Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-        go.SendMessage("ChangeSprite",typeName);
     }
 }

@@ -7,17 +7,16 @@ public class Explision : MonoBehaviour {
     public Sprite invuln;
     SpriteRenderer sr;
 	// Use this for initialization
-	void Start () {
-        sr = transform.GetComponent<SpriteRenderer>();
-	}
-	void Awake()
-    {
+	void Start () {  
         StartCoroutine(SelfDestroyer(0.5f));
     }
 	// Update is called once per frame
 	void Update () {
     }
-
+    private void OnEnable()
+    {
+        sr = transform.GetComponent<SpriteRenderer>();
+    }
     IEnumerator SelfDestroyer(float time)
     {
         Destroy(this.transform.gameObject, time);
@@ -26,6 +25,7 @@ public class Explision : MonoBehaviour {
 
     void ChangeSprite(string vulnType)
     {
+        
         if (vulnType == "vuln") {
             sr.sprite = vuln;
         }
