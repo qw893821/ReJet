@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
     // loot go
     public GameObject power_Loot;
     // Use this for initialization
-    void Start () {
+    void Awake () {
         if (!_gm)
         {
             _gm = this;
