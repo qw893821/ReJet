@@ -132,14 +132,15 @@ public class Bullet : Weapon {
         if (col.tag == "Monster")
         {
             col.gameObject.SendMessage("ApplyDamage", attackPower);
-            SelfDisable();
+            HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
             go.SendMessage("ChangeSprite", "vuln");
+            Debug.Log(attackPower);
         }
         else
         {
-            SelfDisable();
+            HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
             go.SendMessage("ChangeSprite", "invuln");

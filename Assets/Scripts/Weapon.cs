@@ -124,6 +124,11 @@ public class Weapon:MonoBehaviour{
         Destroy(this.gameObject);
     }
 
+    public void HitDisable()
+    {
+        Destroy(this.gameObject);
+    }
+
     public virtual IEnumerator Movement()
     {
         InvokeRepeating("Launch", 0f, 0.03f);

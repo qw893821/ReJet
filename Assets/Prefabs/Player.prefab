@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4422879362819218}
   - component: {fileID: 212775382071327636}
   - component: {fileID: 95934800751912796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498582646628014}
   - component: {fileID: 212358205720150430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 61836850015091526}
   - component: {fileID: 50245706817554260}
   - component: {fileID: 95388715364376424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7affca5c90a0b4e8b64071aff6c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1756683305488844, guid: 94f474eda1d23674b9dc7c3930b30c15, type: 2}
+  bullet: {fileID: 1814825203159386, guid: f11b00a63c40a264f9b2d4da35fc2cf5, type: 2}
   heavyWeapon: {fileID: 1799717251750994, guid: db085395accee3447b0836c03c129fe0,
     type: 2}
   tempPowerMod: 0
