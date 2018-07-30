@@ -17,7 +17,7 @@ public class FollowMissile : Weapon {
         targetMissing = false;
 	}
 	
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Monster")
         {

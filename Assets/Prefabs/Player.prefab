@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1814825203159386, guid: f11b00a63c40a264f9b2d4da35fc2cf5, type: 2}
-  heavyWeapon: {fileID: 1799717251750994, guid: db085395accee3447b0836c03c129fe0,
+  heavyWeapon: {fileID: 1344870664074442, guid: 65258621941a6404b8412acd0895bf39,
     type: 2}
   tempPowerMod: 0
 --- !u!114 &114924839751917198

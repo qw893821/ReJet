@@ -101,6 +101,7 @@ C:/Users/xiuma/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.a
 C:/Users/xiuma/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
 C:/Users/xiuma/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/Editor/UnityEditor.Purchasing.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+C:/Users/xiuma/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@1.1.11-preview/CoreRP/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll
 C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll
 C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.dll
 C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Core.dll
