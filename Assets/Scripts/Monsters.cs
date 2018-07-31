@@ -79,7 +79,7 @@ public class Monsters : MonoBehaviour
         //    bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
         //    Debug.Log("no found");
         //}
-        Debug.Log("shot");
+        Debug.Log("shot ");
     }
 
     void Hiden()
