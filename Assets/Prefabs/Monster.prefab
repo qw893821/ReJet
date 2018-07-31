@@ -36,8 +36,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4726146021550856}
   - component: {fileID: 61158815819736626}
-  - component: {fileID: 95687339688399036}
   - component: {fileID: 114413400714110672}
+  - component: {fileID: 95536501096574000}
   m_Layer: 10
   m_Name: Monster
   m_TagString: Monster
@@ -189,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316771646030142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 3.5, z: 0}
+  m_LocalPosition: {x: 4.0429516, y: -2.3983507, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4702926110631780}
@@ -265,7 +265,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95687339688399036
+--- !u!95 &95536501096574000
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -296,7 +296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1615713076660514, guid: 48cf4b8619fed3946a0dec94bcae090b, type: 2}
   healthPoint: 50
-  lastingtime: 0
+  lastingtime: 10
+  died: 0
 --- !u!212 &212241246912589278
 SpriteRenderer:
   m_ObjectHideFlags: 1

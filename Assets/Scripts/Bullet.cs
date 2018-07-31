@@ -136,10 +136,18 @@ public class Bullet : Weapon {
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
             go.SendMessage("ChangeSprite", "vuln");
-            Debug.Log(attackPower);
+        }
+        else if (col.tag == "Destroyable")
+        {
+            HitDisable();
+            GameObject go;
+            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+            go.SendMessage("ChangeSprite", "vuln");
+            Destroy(col.gameObject);
         }
         else
         {
+            Debug.Log(col.name);
             HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);

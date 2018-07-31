@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212035639893638012}
   - component: {fileID: 114631358134491198}
   - component: {fileID: 61657876709183350}
-  - component: {fileID: 50163227037119750}
   - component: {fileID: 96885992878505872}
   m_Layer: 11
   m_Name: Beam
@@ -42,7 +41,6 @@ GameObject:
   - component: {fileID: 212030253605888570}
   - component: {fileID: 114615480338651570}
   - component: {fileID: 61574785587569226}
-  - component: {fileID: 50666085843203804}
   - component: {fileID: 96263751911871780}
   m_Layer: 11
   m_Name: Beam
@@ -62,7 +60,6 @@ GameObject:
   - component: {fileID: 212701311810579582}
   - component: {fileID: 114158994700819316}
   - component: {fileID: 61485612931132160}
-  - component: {fileID: 50258379420114604}
   - component: {fileID: 96700896134111262}
   m_Layer: 11
   m_Name: Beam
@@ -82,7 +79,6 @@ GameObject:
   - component: {fileID: 212104367499130780}
   - component: {fileID: 114983403644884398}
   - component: {fileID: 61264823543760862}
-  - component: {fileID: 50563919791868834}
   - component: {fileID: 96645622836574738}
   m_Layer: 11
   m_Name: Beam
@@ -101,6 +97,7 @@ GameObject:
   - component: {fileID: 4789490191933026}
   - component: {fileID: 114849810622485400}
   - component: {fileID: 61024318498478792}
+  - component: {fileID: 50778575011778710}
   m_Layer: 11
   m_Name: Fan_Bean
   m_TagString: Untagged
@@ -177,13 +174,13 @@ Transform:
   m_Father: {fileID: 4789490191933026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3}
---- !u!50 &50163227037119750
+--- !u!50 &50778575011778710
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299004156827574}
+  m_GameObject: {fileID: 1814825203159386}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -196,67 +193,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!50 &50258379420114604
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1526488175597506}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!50 &50563919791868834
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1788583250436434}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!50 &50666085843203804
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399315847181388}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &61024318498478792
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -288,7 +225,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1788583250436434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -313,7 +250,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526488175597506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -338,7 +275,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1399315847181388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -363,7 +300,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299004156827574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

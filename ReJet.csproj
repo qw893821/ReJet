@@ -315,14 +315,14 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\UnityAssemblies\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>Library\UnityAssemblies\UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\UnityAssemblies\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

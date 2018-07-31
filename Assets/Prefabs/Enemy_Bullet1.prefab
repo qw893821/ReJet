@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212515969282238512}
   - component: {fileID: 114394842683545152}
   - component: {fileID: 61426405771164246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy_Bullet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2542811cac197474bbbfa6e7a56ad833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 0
   attackPower: 5
+  speed: 0
+  selfDestroyTimer: 0
+  selfDestroyTime: 0
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!212 &212515969282238512
 SpriteRenderer:
   m_ObjectHideFlags: 1

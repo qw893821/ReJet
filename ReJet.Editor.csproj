@@ -315,14 +315,14 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\UnityAssemblies\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>Library\UnityAssemblies\UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\UnityAssemblies\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -357,21 +357,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>Library\UnityAssemblies\Boo.Lang.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.core.Runtime">
-      <HintPath>Library\ScriptAssemblies\com.unity.render-pipelines.core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.render-pipelines.core.Editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.render-pipelines.core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.render-pipelines.high-definition.Runtime">
-      <HintPath>Library\ScriptAssemblies\com.unity.render-pipelines.high-definition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>Library\FacebookSDK\Facebook.Unity.Settings.dll</HintPath>
     </Reference>
@@ -403,83 +388,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\BaseUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Camera\HDCameraEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Camera\HDCameraEditor.Handlers.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Camera\HDCameraUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Camera\SerializedHDCamera.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Decal\DecalMenuItems.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDAssetFactory.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDBaseEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDEditorCLI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDEditorUtils.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDRenderPipelineMenuItems.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\HDShaderIncludePaths.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\HDLightEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\HDLightEditor.Styles.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\EditorReflectionSystem.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\EditorReflectionSystemGUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDCubemapInspector.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeEditor.Handles.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeEditor.Preview.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeEditor.ProbeUtility.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeEditorUtility.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\HDReflectionProbeUI.Drawers.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\PlanarReflectionProbeEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\PlanarReflectionProbeUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\PlanarReflectionProbeUI.Drawers.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\PlanarReflectionProbeUI.Handles.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\SerializedHDReflectionProbe.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\SerializedPlanarReflectionProbe.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\InfluenceVolumeUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\InfluenceVolumeUI.Drawers.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\InfluenceVolumeUI.Gizmos.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\InfluenceVolumeUI.Handles.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\ProxyVolumeEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\ProxyVolumeUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\ReflectionProxyVolumeComponentUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\SerializedInfluenceVolume.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\SerializedProxyVolume.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Lighting\Reflection\Volume\SerializedReflectionProxyVolumeComponent.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Decal\DecalProjectorComponentEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Decal\DecalUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\DiffusionProfile\DiffusionProfileSettingsEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\DiffusionProfile\DiffusionProfileSettingsEditor.Styles.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\LayeredLit\LayeredLitUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Lit\BaseLitUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Lit\LitUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Lit\StandardsToHDLitMaterialUpgrader.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Unlit\BaseUnlitUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Unlit\UnlitsToHDUnlitUpgrader.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Material\Unlit\UnlitUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\FrameSettingsUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\GlobalDecalSettingsUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\GlobalLightLoopSettingsUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\HDRenderPipelineEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\HDRenderPipelineUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\LightLoopSettingsUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\RenderPipelineSettingsUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedFrameSettings.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedGlobalDecalSettings.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedGlobalLightLoopSettings.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedHDRenderPipelineAsset.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedLightLoopSettings.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedRenderPipelineSettings.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\SerializedShadowInitParameters.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\RenderLoopSettings\ShadowInitParametersUI.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Shadows\ContactShadowsEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Shadows\HDShadowSettingsEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\AtmosphericScattering\AtmosphericScatteringEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\AtmosphericScattering\ExponentialFogEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\AtmosphericScattering\LinearFogEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\BakingSkyEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\HDRISky\HDRISkyEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\ProceduralSky\ProceduralSkyEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\SkySettingsEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\Sky\VisualEnvironmentEditor.cs" />
-    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.high-definition@1.1.11-preview\HDRP\Editor\UpgradeStandardShaderMaterials.cs" />
+    <Compile Include="C:\Users\xiuma\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\ShieldShader.shader" />
