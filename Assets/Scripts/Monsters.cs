@@ -12,13 +12,13 @@ public class Monsters : MonoBehaviour
     private void Start()
     {
         GameManager.gm.NameReplace(transform.gameObject);
-        InvokeRepeating("InstBullet", 1f, 2f);
+        //InvokeRepeating("InstBullet", 1f, 2f);
         //died = false;
     }
 
-    void OnEnabled()
+    private void OnEnable()
     {
-        
+        InvokeRepeating("InstBullet", 1f, 2f);
     }
 
     private void OnDisable()
@@ -79,7 +79,6 @@ public class Monsters : MonoBehaviour
         //    bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
         //    Debug.Log("no found");
         //}
-        Debug.Log("shot ");
     }
 
     void Hiden()
@@ -88,6 +87,7 @@ public class Monsters : MonoBehaviour
         foreach(SpriteRenderer sr in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             sr.enabled = false;
+            Invoke("CancelInvoke", 0f);
         }
         
     }

@@ -16,6 +16,7 @@ public class PlayerAction : MonoBehaviour {
     float seRengenerateRate;
     bool shieldOverheat;
 
+    public GameObject jetBody;
     public Sprite flight_default, flight_up, flight_down;
     SpriteRenderer playerSR;
 	// Use this for initialization
@@ -52,7 +53,7 @@ public class PlayerAction : MonoBehaviour {
         pos = transform.position;
         target = pos+ new Vector2(x,y).normalized;
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        MovingSprite(y);
+        MovingAnimation(y);
     }
 
     void MoveDirectionInput(float x, float y)
@@ -80,17 +81,17 @@ public class PlayerAction : MonoBehaviour {
         return s;
     }
 
-    void MovingSprite(float y)
+    void MovingAnimation(float y)
     {
         if (y > 0)
         {
-            playerSR.sprite = flight_up;
+            jetBody.transform.eulerAngles = new Vector3(Mathf.Lerp(0,45.0f,speed/maxSpeed),0f,0f);
         }
         else if (y < 0)
         {
-            playerSR.sprite = flight_down;
+            jetBody.transform.eulerAngles = new Vector3(Mathf.Lerp(0f,-45.0f,speed/maxSpeed),0f,0f);
         }
-        else { playerSR.sprite = flight_default; }
+        else { jetBody.transform.eulerAngles = new Vector3(0,0,0); }
     }
 
     void ShieldUP()
