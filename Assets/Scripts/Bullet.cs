@@ -121,8 +121,7 @@ public class Bullet : Weapon {
         //}
         BulletHit(col);
     }
-
-    void BulletHit(Collider2D col/*,string typeName*/)
+    void BulletHit(Collider2D col)
     {
         //col.gameObject.SendMessage("ApplyDamage", attackPower);
         //SelfDisable();

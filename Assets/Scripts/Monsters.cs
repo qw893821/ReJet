@@ -18,7 +18,11 @@ public class Monsters : MonoBehaviour
 
     private void OnEnable()
     {
-        InvokeRepeating("InstBullet", 1f, 2f);
+        //if there is a bullet attacked to the gameobject, then enable the shooting gammick
+        if (bullet)
+        {
+            InvokeRepeating("InstBullet", 1f, 2f);
+        }
     }
 
     private void OnDisable()
