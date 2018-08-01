@@ -12,10 +12,12 @@ public class DrillMovement : MonoBehaviour {
     bool isidle;
     GameObject player;
     Vector3 targetPos;
-
+    LineRenderer lr;
     private void Start()
     {
         player = GameObject.Find("Player") ;
+        lr = transform.GetComponent<LineRenderer>();
+        isidle = true;
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class DrillMovement : MonoBehaviour {
     {
         idleTimer += Time.deltaTime;
         targetPos = player.transform.position;
+        targetPos -= (targetPos - transform.position).normalized;
         if (idleTimer >= idleTime)
         {
             isidle = false;
@@ -39,17 +42,23 @@ public class DrillMovement : MonoBehaviour {
     {
         
         transform.position = Vector3.MoveTowards(transform.position, targetPos, drillSpeed * Time.deltaTime);
+        lr.SetPosition(0, transform.position);
+        lr.SetPosition(1,targetPos);
         if (transform.position == targetPos)
         {
+            
             isidle = true;
         }
     }
 
     void Action()
     {
+
         if (isidle)
         {
             Idling();
+            transform.rotation = Quaternion.LookRotation(transform.forward,transform.position-targetPos);
+            transform.rotation *= Quaternion.Euler(0,0,90.0f);
             drillSpeed = Vector3.Distance(transform.position,targetPos)/attackTime;
         }
         else
