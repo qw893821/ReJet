@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DrillMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Explision.cs" />
+    <Compile Include="Assets\Scripts\ExtenstionBeam.cs" />
     <Compile Include="Assets\Scripts\FollowMissile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\LootMovement.cs" />
