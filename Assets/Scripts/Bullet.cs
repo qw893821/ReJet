@@ -9,8 +9,7 @@ public class Bullet : Weapon {
     //public float temp_PowerMod;
     //float tempModTimer;
     // Use this for initialization
-    
-
+    //GameObject player;
     //weapon w/o track ability will not require target 
     void Start() {
         //temp_PowerMod = 1.0f;
@@ -19,6 +18,9 @@ public class Bullet : Weapon {
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
         StartCoroutine(Movement());
         StartCoroutine(SelfDisable());
+        //player = GameObject.Find("Player");
+        shot = GameObject.Find("Player").GetComponent<Shot>();
+
     }
 
     
@@ -81,16 +83,16 @@ public class Bullet : Weapon {
     //create the new bullet garbage
     void CreateBulletCollection(int c)
     {
-        GameManager.gm.bullets.Add(new BulletGarbge());
-        GameManager.gm.bullets[c].bulletName = transform.gameObject.name;
-        GameManager.gm.bullets[c].collection.Add(transform.gameObject);
+        shot.bullets.Add(new BulletGarbge());
+        shot.bullets[c].bulletName = transform.gameObject.name;
+        shot.bullets[c].collection.Add(transform.gameObject);
         transform.gameObject.SetActive(false);
     }
 
     //when there is a matched garbage collection, take from the collection
     void GarbageReuse()
     {
-        foreach (BulletGarbge bg in GameManager.gm.bullets)
+        foreach (BulletGarbge bg in shot.bullets)
         {
             if (bg.bulletName == transform.gameObject.name)
             {
@@ -100,7 +102,7 @@ public class Bullet : Weapon {
             }
             else
             {
-                int count = GameManager.gm.bullets.Count;
+                int count = shot.bullets.Count;
                 CreateBulletCollection(count - 1);
             }
         }

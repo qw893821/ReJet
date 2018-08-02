@@ -27,7 +27,8 @@ public class Monsters : MonoBehaviour
 
     private void OnDisable()
     {
-        Invoke("CancelInvoke",0f);
+        //Invoke("CancelInvoke",0f);
+        CancelInvoke();
     }
 
     void ApplyDamage(float ap)
@@ -45,7 +46,8 @@ public class Monsters : MonoBehaviour
             Instantiate(GameManager.gm.power_Loot,transform.position,Quaternion.identity);
             Hiden();
             GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
-            Invoke("CancelInvoke", 0f);
+            //Invoke("CancelInvoke", 0f);
+            this.enabled = false;
             transform.gameObject.SetActive(false);
         }
     }
@@ -91,7 +93,7 @@ public class Monsters : MonoBehaviour
         foreach(SpriteRenderer sr in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             sr.enabled = false;
-            Invoke("CancelInvoke", 0f);
+            //Invoke("CancelInvoke", 0f);
         }
         
     }

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
         get { return _gm; }
     }
 
-    public List<BulletGarbge> bullets;
+    //public List<BulletGarbge> bullets;
 
     public struct GarbgeCheck
     {
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
         }
         else
         { Destroy(this); }
-        bullets = new List<BulletGarbge>();
+        //bullets = new List<BulletGarbge>();
         player = GameObject.Find("Player");
         shot = player.GetComponent<Shot>();
         gc = new GarbgeCheck();

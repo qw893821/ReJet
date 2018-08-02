@@ -15,6 +15,7 @@ public class FollowMissile : Weapon {
         StartCoroutine(Movement());
         StartCoroutine(SelfDisable());
         targetMissing = false;
+        shot = GameObject.Find("Player").GetComponent<Shot>();
 	}
 	
     void OnTriggerEnter2D(Collider2D other)

@@ -23,8 +23,10 @@ public class Weapon:MonoBehaviour{
     //set time of weapon
     public float setTime;
     public float setRate;
+
     //attack speed of each weapon
 
+    protected Shot shot;
     public void SetProperity(float mod)
     {
         attackPower = PromotePower(mod);
