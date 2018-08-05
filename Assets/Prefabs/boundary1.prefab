@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1388854323183426}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1388854323183426
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4437472129506236}
   - component: {fileID: 212529792078678526}
@@ -33,7 +33,7 @@ GameObject:
 --- !u!4 &4437472129506236
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388854323183426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -46,7 +46,7 @@ Transform:
 --- !u!68 &68477836687571018
 EdgeCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388854323183426}
   m_Enabled: 1
@@ -74,7 +74,7 @@ EdgeCollider2D:
 --- !u!68 &68784166117227830
 EdgeCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388854323183426}
   m_Enabled: 1
@@ -102,7 +102,7 @@ EdgeCollider2D:
 --- !u!114 &114430599578882000
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388854323183426}
   m_Enabled: 1
@@ -110,10 +110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6280c0661c4c0074191e78b665043a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: Infinity
 --- !u!212 &212529792078678526
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388854323183426}
   m_Enabled: 1
@@ -155,3 +156,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

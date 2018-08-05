@@ -11,7 +11,7 @@ public class Monsters : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        GameManager.gm.NameReplace(transform.gameObject);
+       // GameManager.gm.NameReplace(transform.gameObject);
         //InvokeRepeating("InstBullet", 1f, 2f);
         //died = false;
     }
@@ -54,10 +54,13 @@ public class Monsters : MonoBehaviour
 
     void InstBullet()
     {
-
         GameObject bullet_Clone;
         bullet_Clone = Instantiate(bullet, transform.position, Quaternion.identity);
-        bullet_Clone.GetComponent<EnemyBullet>().SetProperity();
+        var eb = bullet_Clone.GetComponent<EnemyBullet>();
+        if (eb)
+        {
+            eb.SetProperity();
+        }
 
         //GameObject bullet_Clone;
         //if (GameManager.gm.GarbageFind(GameManager.gm.bullets, bullet, bullet.name).isCreated)

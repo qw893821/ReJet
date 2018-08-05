@@ -23,6 +23,7 @@ public class ExtenstionBeam : MonoBehaviour {
         startPos = transform.position;
         endPos = transform.position;
         dir = player.transform.position - transform.position;
+        GameManager.gm.NameReplace(transform.gameObject);
 	}
 	
 	// Update is called once per frame
