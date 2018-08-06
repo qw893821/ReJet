@@ -63,14 +63,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletGarbge.cs" />
+    <Compile Include="Assets\Scripts\DirectionalBeam.cs" />
     <Compile Include="Assets\Scripts\DrillMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Explision.cs" />
-    <Compile Include="Assets\Scripts\ExtenstionBeam.cs" />
     <Compile Include="Assets\Scripts\FixedBoundryDetection.cs" />
     <Compile Include="Assets\Scripts\FollowMissile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Level1BossMovement.cs" />
+    <Compile Include="Assets\Scripts\LinearBeam.cs" />
     <Compile Include="Assets\Scripts\LootMovement.cs" />
     <Compile Include="Assets\Scripts\Meteor.cs" />
     <Compile Include="Assets\Scripts\MeteorSpawner.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\SpinMovement.cs" />
     <Compile Include="Assets\Scripts\WallBackLightShifting.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
+    <None Include="Assets\Material\LaserBeam.shader" />
     <None Include="Assets\Scripts\ShieldShader.shader" />
     <Reference Include="com.unity.render-pipelines.core.Editor">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
