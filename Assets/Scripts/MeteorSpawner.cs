@@ -33,6 +33,6 @@ public class MeteorSpawner : MonoBehaviour {
 
     private void OnEnable()
     {
-        InvokeRepeating("Spawn", 0.5f, 0.3f);
+        InvokeRepeating("Spawn", 0.5f, 0.5f);
     }
 }
