@@ -27,6 +27,10 @@ public class Weapon:MonoBehaviour{
     //attack speed of each weapon
 
     protected Shot shot;
+
+    //player gameobject, sometimes for tracking, sometimes just for collision check
+    protected GameObject player;
+
     public void SetProperity(float mod)
     {
         attackPower = PromotePower(mod);

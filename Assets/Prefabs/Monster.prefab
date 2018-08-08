@@ -189,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316771646030142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.92813, y: 3.440384, z: 0}
+  m_LocalPosition: {x: 8.575826, y: -2.9278283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4702926110631780}
@@ -300,6 +300,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61158815819736626}
   shotStartDelay: 0
+  idleTime: 2
 --- !u!212 &212241246912589278
 SpriteRenderer:
   m_ObjectHideFlags: 1

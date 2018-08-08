@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4409838767293704}
   - component: {fileID: 61670622349633544}
+  - component: {fileID: 114863800509049220}
   m_Layer: 12
   m_Name: DetectionCollider
   m_TagString: Untagged
@@ -80,7 +81,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -107,10 +108,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d7c218ae9084448ab08be297cafaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beamSpeed: 5
+  basicAttackPower: 5
+  attackPower: 0
+  speed: 5
+  selfDestroyTimer: 0
+  selfDestroyTime: 0
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
   beamTime: 1
   duration: 0
   detectionCollider: {fileID: 1295532536424562}
+--- !u!114 &114863800509049220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1295532536424562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27b8ecea56aac44994bef12ba782243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!120 &120194239291308490
 LineRenderer:
   m_ObjectHideFlags: 1

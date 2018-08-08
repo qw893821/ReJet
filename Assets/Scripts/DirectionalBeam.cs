@@ -2,31 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionalBeam : MonoBehaviour {
+public class DirectionalBeam : Weapon {
     LineRenderer lr;
     Vector3 startPos;
     Vector3 endPos;
-
-    public float beamSpeed;
     //beam length is equals to beamspeed * time, so beamLength is actuall the time of each shoot
     float beamLength;
     public float beamTime;
     public float duration;
-    PolygonCollider2D poly;
-    GameObject player;
-    //direction of beam
-    Vector3 dir;
+    //PolygonCollider2D poly;
+    
     public GameObject detectionCollider;
 
 	// Use this for initialization
 	void Start () {
         lr = transform.GetComponent<LineRenderer>();
-        player = GameObject.Find("Player");
+        player = GameManager.gm.player;
         startPos = transform.position;
         endPos = transform.position;
         dir = player.transform.position - transform.position;
         GameManager.gm.NameReplace(transform.gameObject);
-        poly = transform.GetComponent<PolygonCollider2D>();
+        //poly = transform.GetComponent<PolygonCollider2D>();
         //detectionCollider = GameObject.Find("DetectionCollider");
 	}
 	
@@ -40,12 +36,12 @@ public class DirectionalBeam : MonoBehaviour {
     void RenderBeam()
     {
         beamLength += Time.deltaTime;
-        endPos += Time.deltaTime * beamSpeed * dir.normalized;
+        endPos += Time.deltaTime * speed * dir.normalized;
         if (beamLength < beamTime)
         {
             startPos = transform.position;
         }
-        else { startPos += Time.deltaTime * beamSpeed * dir.normalized; }
+        else { startPos += Time.deltaTime * speed * dir.normalized; }
         lr.SetPosition(0,startPos);
         lr.SetPosition(1,endPos);
     }
@@ -67,5 +63,15 @@ public class DirectionalBeam : MonoBehaviour {
         detectionCollider.transform.rotation = rotation;
         pos = new Vector3((startPos.x+endPos.x)/2, (startPos.y + endPos.y) / 2, (startPos.z + endPos.z) / 2);
         detectionCollider.transform.position = pos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+            col.transform.gameObject.SendMessage("Damaged", basicAttackPower);
+            HitDisable();
+        }
     }
 }

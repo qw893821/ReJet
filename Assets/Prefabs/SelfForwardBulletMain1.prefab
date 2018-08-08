@@ -449,7 +449,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114333611767307034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,7 +471,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114413897310445928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,7 +493,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114800220865873460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -485,7 +515,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114842752860322718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,7 +537,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114847834930318410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,7 +559,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!114 &114990652173891444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -521,7 +581,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 5
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 5
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 0
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!212 &212012575852063886
 SpriteRenderer:
   m_ObjectHideFlags: 1

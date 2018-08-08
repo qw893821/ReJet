@@ -490,6 +490,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61291234722025190}
   shotStartDelay: 1
+  idleTime: 3
 --- !u!114 &114222543535254810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,6 +508,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 0}
   shotStartDelay: 0
+  idleTime: 0
 --- !u!114 &114382777666721242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -524,6 +526,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61973651347502618}
   shotStartDelay: 0
+  idleTime: 3
 --- !u!114 &114414860681667008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,6 +544,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61735539186454260}
   shotStartDelay: 0
+  idleTime: 3
 --- !u!114 &114456514719400830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,6 +562,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61355814006147378}
   shotStartDelay: 0
+  idleTime: 4
 --- !u!114 &114529403297757530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07b46cb3230e4f4d96ea0174fca2664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
 --- !u!114 &114545069578898776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,6 +592,7 @@ MonoBehaviour:
   died: 0
   col: {fileID: 61936649020303080}
   shotStartDelay: 0
+  idleTime: 3
 --- !u!114 &114653939191225108
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class Monsters : MonoBehaviour
     public bool died;
     public Collider2D col;
     public float shotStartDelay;
+    public float idleTime;
     // Use this for initialization
     private void Start()
     {
@@ -23,7 +24,7 @@ public class Monsters : MonoBehaviour
         //if there is a bullet attacked to the gameobject, then enable the shooting gammick
         if (bullet)
         {
-            InvokeRepeating("InstBullet", shotStartDelay, 2f);
+            InvokeRepeating("InstBullet", shotStartDelay, idleTime);
         }
     }
 

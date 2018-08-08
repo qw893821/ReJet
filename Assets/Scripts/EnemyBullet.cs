@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBullet : Weapon {
-    GameObject player;
+    
     //enemy bullet disable timer
-    float selfDisableTimer;
+    
 	// Use this for initialization
 	void Awake () {
-        player = GameObject.Find("Player");
+        player = GameManager.gm.player;
     }
+
     private void Start()
     {
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
-
+        selfDestroyTimer=0f;
         speed = 5f;
-        
+        StartCoroutine(SelfDisable());
     }
+
     // Update is called once per frame
     void Update () {
         BulletMove();
-        selfDisableTimer += Time.deltaTime;
-        if (selfDisableTimer >= 5f)
-        {
-            SelfDisable();
-        }
+        //selfDestroyTimer += Time.deltaTime;
+        //if (selfDestroyTimer >= selfDestroyTime)
+        //{
+        //    SelfDisable();
+        //}
 	}
 
 
@@ -76,6 +78,7 @@ public class EnemyBullet : Weapon {
         {
             Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
             collision.transform.gameObject.SendMessage("Damaged",basicAttackPower);
+            HitDisable();
         }
     }
 }

@@ -15,7 +15,7 @@ public class PlayerAction : MonoBehaviour {
     float shieldMod;
     float seRengenerateRate;
     bool shieldOverheat;
-
+    const float defaultShieldValue=20.0f;
     public GameObject jetBody;
     public Sprite flight_default, flight_up, flight_down;
     SpriteRenderer playerSR;
@@ -136,11 +136,15 @@ public class PlayerAction : MonoBehaviour {
         if (shield.activeSelf)
         {
             shieldENE-=dmg;
-            Debug.Log("hit shield");
         }
         else
         {
-            Debug.Log("hit player");
+            GameManager.gm.SwpawnPlayer();
         }
+    }
+
+    public void RestoreShield(float restoreValue=defaultShieldValue)
+    {
+        shieldENE += restoreValue;
     }
 }

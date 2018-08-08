@@ -24,16 +24,25 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    private int _lifepoint;
+    private int lifePoint
+    {
+        get { return _lifepoint; }
+        set { _lifepoint = value; }
+
+    }
+
     GarbgeCheck gc;
     public GameObject explision_Anim;
 
     public GameObject explosionSoundEffect;
 
-    GameObject player;
+    public GameObject player;
     public Shot shot;
     public GameObject boundary1, boundary2;
     // loot go
     public GameObject power_Loot;
+
     // Use this for initialization
     void Awake () {
         if (!_gm)
@@ -47,6 +56,9 @@ public class GameManager : MonoBehaviour {
         shot = player.GetComponent<Shot>();
         gc = new GarbgeCheck();
         InvokeRepeating("MoveBoundary",0.5f,0.1f);
+
+        //test
+        lifePoint = 100;
 	}
 	
 	// Update is called once per frame
@@ -118,5 +130,31 @@ public class GameManager : MonoBehaviour {
     {
         StartCoroutine(BoundaryShifter(boundary1));
         StartCoroutine(BoundaryShifter(boundary2));
+    }
+
+    public void SwpawnPlayer()
+    {
+        if (LifeLeftCheck())
+        {
+            var spawnPos = new Vector3(-8.5f,0,0);
+
+            player.transform.position = spawnPos;
+            player.GetComponent<PlayerAction>().RestoreShield();
+        }
+        else
+        {
+            //game over
+
+        }
+    }
+
+    bool LifeLeftCheck()
+    {
+        if (lifePoint >= 1)
+        {
+            lifePoint--;
+            return true;
+        }
+        return false;
     }
 }
