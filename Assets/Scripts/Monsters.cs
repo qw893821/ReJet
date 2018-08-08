@@ -8,6 +8,8 @@ public class Monsters : MonoBehaviour
     public float healthPoint;
     public float lastingtime;
     public bool died;
+    public Collider2D col;
+    public float shotStartDelay;
     // Use this for initialization
     private void Start()
     {
@@ -21,7 +23,7 @@ public class Monsters : MonoBehaviour
         //if there is a bullet attacked to the gameobject, then enable the shooting gammick
         if (bullet)
         {
-            InvokeRepeating("InstBullet", 1f, 2f);
+            InvokeRepeating("InstBullet", shotStartDelay, 2f);
         }
     }
 
@@ -29,6 +31,7 @@ public class Monsters : MonoBehaviour
     {
         //Invoke("CancelInvoke",0f);
         CancelInvoke();
+        Hiden();
     }
 
     void ApplyDamage(float ap)
@@ -44,10 +47,11 @@ public class Monsters : MonoBehaviour
         {
             died = true;
             Instantiate(GameManager.gm.power_Loot,transform.position,Quaternion.identity);
-            Hiden();
             GameManager.gm.explosionSoundEffect.GetComponent<AudioSource>().Play();
             //Invoke("CancelInvoke", 0f);
+            //timeline will enable gameobject when
             this.enabled = false;
+            Hiden();
             transform.gameObject.SetActive(false);
         }
     }
@@ -92,12 +96,17 @@ public class Monsters : MonoBehaviour
 
     void Hiden()
     {
-        transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        col.enabled = false;
         foreach(SpriteRenderer sr in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             sr.enabled = false;
             //Invoke("CancelInvoke", 0f);
         }
-        
+        MeshRenderer mr;
+        mr = transform.GetComponent<MeshRenderer>();
+        if (mr)
+        {
+            mr.enabled = false;
+        }
     }
 }

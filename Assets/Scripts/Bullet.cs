@@ -125,11 +125,6 @@ public class Bullet : Weapon {
     }
     void BulletHit(Collider2D col)
     {
-        //col.gameObject.SendMessage("ApplyDamage", attackPower);
-        //SelfDisable();
-        //GameObject go;
-        //go=Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-        //go.SendMessage("ChangeSprite",typeName);
         if (col.tag == "Monster")
         {
             col.gameObject.SendMessage("ApplyDamage", attackPower);
