@@ -24,22 +24,7 @@ public class Bullet : Weapon {
     }
 
     
-    private void Awake()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-        //BulletMove();
-        //selfDestroyTimer += Time.deltaTime;
-        //{
-        //    if (selfDestroyTimer >= selfDestroyTime)
-        //    {
-        //        SelfDisable();
-        //    }
-        //}
-    }
+    
 
     public override void Launch()
     {
@@ -124,7 +109,7 @@ public class Bullet : Weapon {
         BulletHit(col);
     }
 
-    public void BulletHit(Collider2D col)
+    public virtual void BulletHit(Collider2D col)
     {
         if (col.tag == "Monster")
         {
