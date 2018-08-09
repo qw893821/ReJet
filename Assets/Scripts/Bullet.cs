@@ -83,16 +83,16 @@ public class Bullet : Weapon {
     //create the new bullet garbage
     void CreateBulletCollection(int c)
     {
-        shot.bullets.Add(new BulletGarbge());
-        shot.bullets[c].bulletName = transform.gameObject.name;
-        shot.bullets[c].collection.Add(transform.gameObject);
+        shot.bulletsgarbge.Add(new BulletGarbge());
+        shot.bulletsgarbge[c].bulletName = transform.gameObject.name;
+        shot.bulletsgarbge[c].collection.Add(transform.gameObject);
         transform.gameObject.SetActive(false);
     }
 
     //when there is a matched garbage collection, take from the collection
     void GarbageReuse()
     {
-        foreach (BulletGarbge bg in shot.bullets)
+        foreach (BulletGarbge bg in shot.bulletsgarbge)
         {
             if (bg.bulletName == transform.gameObject.name)
             {
@@ -102,7 +102,7 @@ public class Bullet : Weapon {
             }
             else
             {
-                int count = shot.bullets.Count;
+                int count = shot.bulletsgarbge.Count;
                 CreateBulletCollection(count - 1);
             }
         }

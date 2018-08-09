@@ -2529,7 +2529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7affca5c90a0b4e8b64071aff6c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1814825203159386, guid: f11b00a63c40a264f9b2d4da35fc2cf5, type: 2}
+  bullets:
+  - {fileID: 1814825203159386, guid: f11b00a63c40a264f9b2d4da35fc2cf5, type: 2}
+  - {fileID: 1756683305488844, guid: 94f474eda1d23674b9dc7c3930b30c15, type: 2}
   heavyWeapon: {fileID: 1344870664074442, guid: 65258621941a6404b8412acd0895bf39,
     type: 2}
   tempPowerMod: 0
@@ -2547,9 +2549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shieldENE: 0
   jetBody: {fileID: 962492437}
-  flight_default: {fileID: 21300000, guid: 11631c95306279145af661327173648b, type: 3}
-  flight_up: {fileID: 21300000, guid: 40085f5a8fa086048bd49f2c49f2076b, type: 3}
-  flight_down: {fileID: 21300000, guid: 1fcf9e8311fcfc04ea7c20fbc6b60338, type: 3}
 --- !u!4 &1351235024
 Transform:
   m_ObjectHideFlags: 0

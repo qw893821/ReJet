@@ -2,12 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WeaponType
-{
-    dirtectional,
-    fix,
-    tracking
-}
+
 public class GameManager : MonoBehaviour {
     private static GameManager _gm;
     public static GameManager gm

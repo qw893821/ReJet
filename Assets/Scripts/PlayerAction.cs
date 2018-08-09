@@ -17,14 +17,14 @@ public class PlayerAction : MonoBehaviour {
     bool shieldOverheat;
     const float defaultShieldValue=20.0f;
     public GameObject jetBody;
-    public Sprite flight_default, flight_up, flight_down;
-    SpriteRenderer playerSR;
+    //public Sprite flight_default, flight_up, flight_down;
+    //SpriteRenderer playerSR;
 	// Use this for initialization
 	void Start () {
         speed = 0f;
         maxSpeed = 5.0f;
         speedUPRate = 15.0f;
-        playerSR=transform.GetComponent<SpriteRenderer>();
+        //playerSR=transform.GetComponent<SpriteRenderer>();
         shield = GameObject.Find("Shield");
         basicshiedlENE = 20.0f;
         maxShieldENE = 20.0f;
