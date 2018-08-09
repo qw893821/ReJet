@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DirectionalBeam.cs" />
     <Compile Include="Assets\Scripts\DrillMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\EnemySubWeapon.cs" />
     <Compile Include="Assets\Scripts\Explision.cs" />
     <Compile Include="Assets\Scripts\FixedBoundryDetection.cs" />
     <Compile Include="Assets\Scripts\FollowMissile.cs" />
@@ -81,8 +82,8 @@
     <Compile Include="Assets\Scripts\ObjectAdditionalFunction.cs" />
     <Compile Include="Assets\Scripts\ParticleRotateFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerAction.cs" />
+    <Compile Include="Assets\Scripts\PlayerSubWeapon.cs" />
     <Compile Include="Assets\Scripts\SelfDestroyerEditor.cs" />
-    <Compile Include="Assets\Scripts\SelfForwardBullet.cs" />
     <Compile Include="Assets\Scripts\Shot.cs" />
     <Compile Include="Assets\Scripts\SpinMovement.cs" />
     <Compile Include="Assets\Scripts\WallBackLightShifting.cs" />

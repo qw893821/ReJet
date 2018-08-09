@@ -86,6 +86,7 @@ public class Shot : MonoBehaviour {
             CancelInvoke("BulletInster");
             //CancelInvoke("HeavyWeaponInster");
         }
+        Debug.Log(bullet.currentbullet);
     }
 
     void PowerUpCounter()
@@ -109,6 +110,7 @@ public class Shot : MonoBehaviour {
     //}
 
     //weapon is the go which will instantiated, time is the time between each shot
+    //use broadcast message to make it work for weapon with multi sub weapon(child object)
     void InstBullet(GameObject weapongo)
     {
         if (weapongo)
@@ -119,9 +121,10 @@ public class Shot : MonoBehaviour {
                 count = /*GameManager.gm.bullets*/bulletsgarbge[GameManager.gm.GarbageFind(/*GameManager.gm.bullets*/bulletsgarbge, weapongo, weapongo.name).garbgeIndex].collection.Count;
                 if (count == 0)
                 {
-                    GameObject go;
-                    go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
-                    go.SendMessage("SetProperity", tempPowerMod);
+                    //GameObject go;
+                    //go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
+                    //go.BroadcastMessage("SetProperity", tempPowerMod);
+                    InstGO(weapongo);
                 }
                 else
                 {
@@ -136,14 +139,21 @@ public class Shot : MonoBehaviour {
             }
             else
             {
-                GameObject go;
-                go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
-                go.SendMessage("SetProperity", tempPowerMod);
+                //GameObject go;
+                //go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
+                //go.BroadcastMessage("SetProperity", tempPowerMod);
+                InstGO(weapongo);
             }
         }
 
         else { return; }
-
+    }
+    
+    void InstGO(GameObject weapongo)
+    {
+        GameObject go;
+        go = Instantiate(weapongo/*, transform.position, Quaternion.identity*/);
+        go.BroadcastMessage("SetProperity", tempPowerMod);
     }
 
     void BulletInster()
@@ -203,6 +213,4 @@ public class Shot : MonoBehaviour {
         bulletattackSpeed = bullet.currentbullet.GetComponent<Bullet>().attackSpeed;
         heavyattackSpeed = heavyWeapon.GetComponent<FollowMissile>().attackSpeed;
     }
-
-    
 }

@@ -123,7 +123,8 @@ public class Bullet : Weapon {
         //}
         BulletHit(col);
     }
-    void BulletHit(Collider2D col)
+
+    public void BulletHit(Collider2D col)
     {
         if (col.tag == "Monster")
         {
