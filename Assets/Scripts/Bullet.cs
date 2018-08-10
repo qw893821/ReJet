@@ -109,31 +109,31 @@ public class Bullet : Weapon {
         BulletHit(col);
     }
 
-    public virtual void BulletHit(Collider2D col)
-    {
-        if (col.tag == "Monster")
-        {
-            col.gameObject.SendMessage("ApplyDamage", attackPower);
-            HitDisable();
-            GameObject go;
-            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "vuln");
-        }
-        else if (col.tag == "Destroyable")
-        {
-            HitDisable();
-            GameObject go;
-            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "vuln");
-            Destroy(col.gameObject);
-        }
-        else
-        {
-            Debug.Log(col.name);
-            HitDisable();
-            GameObject go;
-            go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "invuln");
-        }
-    }
+    //public virtual void BulletHit(Collider2D col)
+    //{
+    //    if (col.tag == "Monster")
+    //    {
+    //        col.gameObject.SendMessage("ApplyDamage", attackPower);
+    //        HitDisable();
+    //        GameObject go;
+    //        go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+    //        go.SendMessage("ChangeSprite", "vuln");
+    //    }
+    //    else if (col.tag == "Destroyable")
+    //    {
+    //        HitDisable();
+    //        GameObject go;
+    //        go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+    //        go.SendMessage("ChangeSprite", "vuln");
+    //        Destroy(col.gameObject);
+    //    }
+    //    else
+    //    {
+    //        Debug.Log(col.name);
+    //        HitDisable();
+    //        GameObject go;
+    //        go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+    //        go.SendMessage("ChangeSprite", "invuln");
+    //    }
+    //}
 }

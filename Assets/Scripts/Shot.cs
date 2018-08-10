@@ -86,7 +86,6 @@ public class Shot : MonoBehaviour {
             CancelInvoke("BulletInster");
             //CancelInvoke("HeavyWeaponInster");
         }
-        Debug.Log(bullet.currentbullet);
     }
 
     void PowerUpCounter()

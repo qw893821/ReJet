@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\BulletGarbge.cs" />
     <Compile Include="Assets\Scripts\DirectionalBeam.cs" />
     <Compile Include="Assets\Scripts\DrillMovement.cs" />
+    <Compile Include="Assets\Scripts\DurationWeapon.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\EnemySubWeapon.cs" />
     <Compile Include="Assets\Scripts\Explision.cs" />

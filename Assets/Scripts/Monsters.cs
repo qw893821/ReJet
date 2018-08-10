@@ -41,6 +41,12 @@ public class Monsters : MonoBehaviour
         Die();
     }
 
+    void DurationDamage(float ap)
+    {
+        healthPoint -= ap * Time.deltaTime;
+        Die();
+    }
+
 
     void Die()
     {

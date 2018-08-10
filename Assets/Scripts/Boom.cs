@@ -6,6 +6,7 @@ public class Boom : Bullet {
     public GameObject boomexplosion;
 	// Use this for initialization
 	void Start () {
+        player = GameManager.gm.player;
         transform.gameObject.name = GameManager.gm.NameReplace(transform.gameObject);
         StartCoroutine(Movement());
         StartCoroutine(SelfDisable());
@@ -23,8 +24,18 @@ public class Boom : Bullet {
 
     public override void BulletHit(Collider2D col)
     {
-        Instantiate(boomexplosion,transform.position,Quaternion.identity);
-        HitDisable();
-        Debug.Log("boom boom");
+        if (col.tag == "Destroyable")
+            {
+                Destroy(col.gameObject);
+            }
+            GameObject go;
+            Vector3 fixpos;
+            go = Instantiate(boomexplosion, transform.position, Quaternion.identity);
+            fixpos = go.transform.position;
+            go.GetComponent<DurationWeapon>().SetProperity(player.GetComponent<Shot>().tempPowerMod);
+            go.transform.position = fixpos;
+            HitDisable();
+
+        
     }
 }
