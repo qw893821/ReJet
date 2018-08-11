@@ -31,7 +31,7 @@ public class Weapon:MonoBehaviour{
     //player gameobject, sometimes for tracking, sometimes just for collision check
     protected GameObject player;
 
-    public void SetProperity(float mod)
+    public virtual void SetProperity(float mod)
     {
         attackPower = PromotePower(mod);
         transform.position = GameManager.gm.shot.transform.position;
@@ -65,7 +65,7 @@ public class Weapon:MonoBehaviour{
         return closest;
     }
 
-    void MoveTowardTarget()
+    protected virtual void MoveTowardTarget()
     {
         //when there is a target
         if (target)
@@ -152,7 +152,7 @@ public class Weapon:MonoBehaviour{
     {
         if (col.tag == "Monster")
         {
-            col.gameObject.SendMessage("ApplyDamage", attackPower);
+            col.gameObject.SendMessage("ApplyDamage", attackPower,SendMessageOptions.DontRequireReceiver);
             HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);

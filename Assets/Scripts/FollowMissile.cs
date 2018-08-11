@@ -22,7 +22,7 @@ public class FollowMissile : Weapon {
     {
         if (other.tag == "Monster")
         {
-                other.gameObject.SendMessage("ApplyDamage", basicAttackPower);
+                other.gameObject.SendMessage("ApplyDamage", basicAttackPower,SendMessageOptions.DontRequireReceiver);
                 Destroy(this.gameObject);
         }   
     }

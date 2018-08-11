@@ -51,6 +51,9 @@ TagManager:
   - name: Monster
     uniqueID: 2425121137
     locked: 0
+  - name: Explosion
+    uniqueID: 1878757757
+    locked: 0
   - name: Loot
     uniqueID: 2411355471
     locked: 0

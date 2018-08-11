@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f86291fe54e5544bd195ab385e6fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackPower: 10
+  basicAttackPower: 5
   attackPower: 0
   speed: 8
   selfDestroyTimer: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f86291fe54e5544bd195ab385e6fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackPower: 10
+  basicAttackPower: 5
   attackPower: 0
   speed: 8
   selfDestroyTimer: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f86291fe54e5544bd195ab385e6fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackPower: 10
+  basicAttackPower: 5
   attackPower: 0
   speed: 8
   selfDestroyTimer: 0

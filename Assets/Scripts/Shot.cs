@@ -76,7 +76,7 @@ public class Shot : MonoBehaviour {
         }
         if (Input.GetKeyDown("j"))
         {
-            InstBullet(bullet.currentbullet);
+            //InstBullet(bullet.currentbullet);
             //InstBullet(heavyWeapon);
             InvokeRepeating("BulletInster", 0f, 0.016f);
             //InvokeRepeating("HeavyWeaponInster", 0f, 0.016f);

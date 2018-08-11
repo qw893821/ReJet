@@ -24,8 +24,13 @@ public class DurationWeapon : Bullet {
     {
         if (col.tag == "Monster")
         {
-            col.gameObject.SendMessage("DurationDamage", attackPower);
+            col.gameObject.SendMessage("DurationDamage", attackPower,SendMessageOptions.DontRequireReceiver);
         }
 
+    }
+
+    public override void SetProperity(float mod)
+    {
+        attackPower = PromotePower(mod);
     }
 }
