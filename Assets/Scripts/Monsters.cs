@@ -48,7 +48,7 @@ public class Monsters : MonoBehaviour
     }
 
 
-    void Die()
+    protected virtual void Die()
     {
         if (healthPoint <= 0)
         {
@@ -101,7 +101,7 @@ public class Monsters : MonoBehaviour
         //}
     }
 
-    void Hiden()
+    protected void Hiden()
     {
         col.enabled = false;
         foreach(SpriteRenderer sr in transform.GetComponentsInChildren<SpriteRenderer>())
@@ -115,6 +115,5 @@ public class Monsters : MonoBehaviour
         {
             mr.enabled = false;
         }
-
     }
 }

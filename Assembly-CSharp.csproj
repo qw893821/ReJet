@@ -70,6 +70,7 @@
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\AtMine.cs" />
     <Compile Include="Assets\Scripts\BeamDetection.cs" />
     <Compile Include="Assets\Scripts\Boom.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -83,11 +84,13 @@
     <Compile Include="Assets\Scripts\FixedBoundryDetection.cs" />
     <Compile Include="Assets\Scripts\FollowMissile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\LaserSensor.cs" />
     <Compile Include="Assets\Scripts\Level1BossMovement.cs" />
     <Compile Include="Assets\Scripts\LinearBeam.cs" />
     <Compile Include="Assets\Scripts\LootMovement.cs" />
     <Compile Include="Assets\Scripts\Meteor.cs" />
     <Compile Include="Assets\Scripts\MeteorSpawner.cs" />
+    <Compile Include="Assets\Scripts\MonsterBoomer.cs" />
     <Compile Include="Assets\Scripts\MonsterCircularMove.cs" />
     <Compile Include="Assets\Scripts\Monsters.cs" />
     <Compile Include="Assets\Scripts\ObjectAdditionalFunction.cs" />
@@ -102,7 +105,6 @@
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\Mirza Beig\_DOCS\README - Inferno VFX.txt" />
     <None Include="Assets\Material\LaserBeam.shader" />
-    <None Include="Assets\Scripts\ShieldShader.shader" />
     <Reference Include="com.unity.render-pipelines.core.Editor">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
     </Reference>

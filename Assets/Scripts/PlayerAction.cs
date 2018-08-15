@@ -8,6 +8,7 @@ public class PlayerAction : MonoBehaviour {
     float speedUPRate;
     //shield
     GameObject shield;
+    Renderer shieldRenderer;
     float maxShieldENE;
     float basicshiedlENE;
     float seReductionRate;
@@ -26,6 +27,7 @@ public class PlayerAction : MonoBehaviour {
         speedUPRate = 15.0f;
         //playerSR=transform.GetComponent<SpriteRenderer>();
         shield = GameObject.Find("Shield");
+        shieldRenderer = shield.GetComponent<Renderer>();
         basicshiedlENE = 20.0f;
         maxShieldENE = 20.0f;
         shieldMod = 1.0f;
@@ -136,6 +138,7 @@ public class PlayerAction : MonoBehaviour {
         if (shield.activeSelf)
         {
             shieldENE-=dmg;
+            shieldRenderer.material.SetFloat("Boolean_2417E994", 1.0f);
         }
         else
         {

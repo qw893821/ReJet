@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour {
     public List<GameObject> bullets;
+    AudioSource shotsound;
+
     public struct PlayerBullet {
         public int index;
         public GameObject currentbullet;
@@ -48,7 +50,7 @@ public class Shot : MonoBehaviour {
         bullet.index = 0;
         GetBulletProperity(bullet.index);
         bulletsgarbge = new List<BulletGarbge>();
-        
+        shotsound = transform.GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -80,11 +82,13 @@ public class Shot : MonoBehaviour {
             //InstBullet(heavyWeapon);
             InvokeRepeating("BulletInster", 0f, 0.016f);
             //InvokeRepeating("HeavyWeaponInster", 0f, 0.016f);
+            shotsound.Play();
         }
         else if (Input.GetKeyUp("j"))
         {
             CancelInvoke("BulletInster");
             //CancelInvoke("HeavyWeaponInster");
+            shotsound.Stop();
         }
     }
 

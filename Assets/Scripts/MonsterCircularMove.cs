@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterCircularMove : MonoBehaviour {
+    //this script have performance issue
     float circularTimer;
     float speed;//linear move speed
     public Vector3 target;

@@ -76,9 +76,7 @@ public class EnemyBullet : Weapon {
     {
         if (collision.tag == "Player")
         {
-            Instantiate(GameManager.gm.explision_Anim,transform.position,Quaternion.identity);
-            collision.transform.gameObject.SendMessage("Damaged",basicAttackPower);
-            HitDisable();
+            HitPlayer(collision);
         }
     }
 }

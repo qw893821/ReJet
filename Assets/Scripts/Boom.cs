@@ -18,7 +18,7 @@ public class Boom : Bullet
     // Update is called once per frame
     void Update()
     {
-        MoveTowardTarget();
+        TransDirMove();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -42,12 +42,12 @@ public class Boom : Bullet
 
     }
 
-    protected override void MoveTowardTarget()
-    {
-        Vector3 target;
-        target = transform.position + dir;
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-    }
+    //protected override void MoveTowardTarget()
+    //{
+    //    Vector3 target;
+    //    target = transform.position + dir;
+    //    transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    //}
 
     //public override void SetProperity(float mod)
     //{

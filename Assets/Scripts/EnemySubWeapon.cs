@@ -16,16 +16,17 @@ public class EnemySubWeapon: Weapon {
     }
     // Update is called once per frame
     void Update () {
-        Move();
-        
+        TransDirMove();
+
+
     }
 
-    private void Move()
-    {
-        Vector3 target;
-        target = transform.position + dir;
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-    }
+    //private void Move()
+    //{
+    //    Vector3 target;
+    //    target = transform.position + dir;
+    //    transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

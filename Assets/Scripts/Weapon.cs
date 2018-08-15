@@ -156,23 +156,36 @@ public class Weapon:MonoBehaviour{
             HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "vuln");
+            //go.SendMessage("ChangeSprite", "vuln");
         }
         else if (col.tag == "Destroyable")
         {
             HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "vuln");
+            //go.SendMessage("ChangeSprite", "vuln");
             Destroy(col.gameObject);
         }
         else
         {
-            Debug.Log(col.name);
             HitDisable();
             GameObject go;
             go = Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
-            go.SendMessage("ChangeSprite", "invuln");
+            //go.SendMessage("ChangeSprite", "invuln");
         }
+    }
+
+    protected void HitPlayer(Collider2D col)
+    {
+        Instantiate(GameManager.gm.explision_Anim, transform.position, Quaternion.identity);
+        col.transform.gameObject.SendMessage("Damaged", basicAttackPower);
+        HitDisable();
+    }
+
+    protected virtual void TransDirMove()
+    {
+        Vector3 target;
+        target = transform.position + dir;
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 }
