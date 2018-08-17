@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterBoomer :Monsters {
-    public GameObject boomer;
+    //public GameObject boomer;
 	// Use this for initialization
 	void Start () {
         died = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    
+    //overrid(not exactly) the OnEnable() function in Monster to avoid the on enable Bullet instantiate
+    private void OnEnable()
+    {
+        
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -26,7 +32,7 @@ public class MonsterBoomer :Monsters {
         base.Die();
         if (died)
         {
-            Instantiate(boomer,transform.position,Quaternion.identity);
+            Instantiate(bullet,transform.position,Quaternion.identity);
             Debug.Log("boom");
         }
     }

@@ -93,6 +93,8 @@
     <Compile Include="Assets\Scripts\MonsterBoomer.cs" />
     <Compile Include="Assets\Scripts\MonsterCircularMove.cs" />
     <Compile Include="Assets\Scripts\Monsters.cs" />
+    <Compile Include="Assets\Scripts\MonsterSetter.cs" />
+    <Compile Include="Assets\Scripts\MonsterSetterMovement.cs" />
     <Compile Include="Assets\Scripts\ObjectAdditionalFunction.cs" />
     <Compile Include="Assets\Scripts\ParticleRotateFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerAction.cs" />
@@ -105,11 +107,13 @@
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\Mirza Beig\_DOCS\README - Inferno VFX.txt" />
     <None Include="Assets\Material\LaserBeam.shader" />
-    <Reference Include="com.unity.render-pipelines.core.Editor">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
+    <None Include="Assets\sryurikennset\Readmejp.txt" />
+    <None Include="Assets\sryurikennset\Readme.txt" />
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.core.Runtime">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.core.Runtime.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -117,35 +121,35 @@
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.lightweight.Runtime">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Runtime.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.lightweight.Editor">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.high-definition.Runtime">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.high-definition.Runtime.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.high-defintion.Editor">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.high-defintion.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.render-pipelines.core.IncludePaths">
-      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.IncludePaths">
+      <HintPath>C:/Users/xiuma/Documents/GitHub/ReJet/Library/ScriptAssemblies/Unity.RenderPipelines.Core.IncludePaths.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -35,13 +35,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084634833026830}
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &61109737613426238
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -78,7 +78,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273ab9003a324aa4fa6aa4a9f62e729c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackPower: 10
+  attackPower: 0
   speed: 3
+  selfDestroyTimer: 0
+  selfDestroyTime: 5
+  attackSpeed: 0
+  target: {fileID: 0}
+  fixed_PowerMod: 1
+  targetMissing: 0
+  setTime: 0
+  setRate: 0
 --- !u!212 &212175568405103954
 SpriteRenderer:
   m_ObjectHideFlags: 1

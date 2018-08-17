@@ -7,18 +7,14 @@ public class EnemySubWeapon: Weapon {
 	// Use this for initialization
 	void Start () {
         StartCoroutine(SelfDisable());
-	}
-
-    private void Awake()
-    {
         dir = transform.right;
         player = GameManager.gm.player;
     }
+
+
     // Update is called once per frame
     void Update () {
         TransDirMove();
-
-
     }
 
     //private void Move()
