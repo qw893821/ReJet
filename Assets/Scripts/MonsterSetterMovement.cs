@@ -5,14 +5,14 @@ using UnityEngine;
 public class MonsterSetterMovement : MonoBehaviour {
     Vector3 target;
     GameObject player;
-    Monsters monster;
+    MonsterSetter monster;
     bool move;
     bool back;
     public float setTime;
 	// Use this for initialization
 	void Start () {
         player = GameManager.gm.player;
-        monster = transform.GetComponent<Monsters>();
+        monster = transform.GetComponent<MonsterSetter>();
         move = true;
         back = false;
 	}
@@ -60,7 +60,7 @@ public class MonsterSetterMovement : MonoBehaviour {
 
     void Inst()
     {
-        Instantiate(monster.bullet, transform.position, transform.rotation);
+        monster.InstBullet();
         back = true;
     }
 

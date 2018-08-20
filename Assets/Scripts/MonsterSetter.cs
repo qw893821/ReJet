@@ -16,4 +16,9 @@ public class MonsterSetter : Monsters {
 	void Update () {
 		
 	}
+
+    public override void InstBullet()
+    {
+        Instantiate(bullet, transform.position, Quaternion.identity);
+    }
 }

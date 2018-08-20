@@ -12,6 +12,7 @@ public class EnemySubWeapon: Weapon {
     }
 
 
+
     // Update is called once per frame
     void Update () {
         TransDirMove();

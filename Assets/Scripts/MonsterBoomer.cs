@@ -32,8 +32,7 @@ public class MonsterBoomer :Monsters {
         base.Die();
         if (died)
         {
-            Instantiate(bullet,transform.position,Quaternion.identity);
-            Debug.Log("boom");
+            Instantiate(bullet,transform.position,Quaternion.identity); 
         }
     }
 }

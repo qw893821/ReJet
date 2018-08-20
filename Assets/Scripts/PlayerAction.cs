@@ -9,6 +9,7 @@ public class PlayerAction : MonoBehaviour {
     //shield
     GameObject shield;
     Renderer shieldRenderer;
+    bool shieldup;
     float maxShieldENE;
     float basicshiedlENE;
     float seReductionRate;
@@ -18,10 +19,14 @@ public class PlayerAction : MonoBehaviour {
     bool shieldOverheat;
     const float defaultShieldValue=20.0f;
     public GameObject jetBody;
+
+    //shield dissolve value
+    float dv;
     //public Sprite flight_default, flight_up, flight_down;
     //SpriteRenderer playerSR;
 	// Use this for initialization
 	void Start () {
+        dv = 1;
         speed = 0f;
         maxSpeed = 5.0f;
         speedUPRate = 15.0f;
@@ -36,6 +41,7 @@ public class PlayerAction : MonoBehaviour {
         //negative value
         seRengenerateRate = -1.0f;
         shieldOverheat = false;
+        shieldup = false;
 	}
 	
 	// Update is called once per frame
@@ -100,12 +106,28 @@ public class PlayerAction : MonoBehaviour {
     {
         if (Input.GetKey("k")&&ShieldENEChenck()&&!shieldOverheat)
         {
-            shield.SetActive(true);
+            shieldup = true;
+            //shield.SetActive(true);
             ShieldENEReduction(seReductionRate);
+            dv -= Time.deltaTime;
+
         }
-        else { shield.SetActive(false);
+        else {
+            shieldup = false;
+            //shield.SetActive(false);
             ShieldENEReduction(seRengenerateRate);
+            dv += Time.deltaTime;
         }
+
+        if (dv > 1)
+        {
+            dv = 1;
+        }
+        if (dv < -1)
+        {
+            dv = -1;
+        }
+        shieldRenderer.material.SetFloat("Vector1_C403D1BD", dv);
     }
 
     bool ShieldENEChenck()
@@ -135,7 +157,7 @@ public class PlayerAction : MonoBehaviour {
 
     void Damaged(float dmg)
     {
-        if (shield.activeSelf)
+        if (shieldup)
         {
             shieldENE-=dmg;
             shieldRenderer.material.SetFloat("Boolean_2417E994", 1.0f);
@@ -150,4 +172,6 @@ public class PlayerAction : MonoBehaviour {
     {
         shieldENE += restoreValue;
     }
+
+    
 }

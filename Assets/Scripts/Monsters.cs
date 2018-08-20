@@ -63,7 +63,7 @@ public class Monsters : MonoBehaviour
         }
     }
 
-    void InstBullet()
+    public virtual void InstBullet()
     {
         GameObject bullet_Clone;
         bullet_Clone = Instantiate(bullet, transform.position, Quaternion.identity);
