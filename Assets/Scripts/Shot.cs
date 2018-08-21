@@ -36,8 +36,8 @@ public class Shot : MonoBehaviour {
     public GameObject heavyWeapon;
     //bullet shoot speed when press and hold button
     float time = 0.2f;
-    float bulletTimer;
-    float bulletattackSpeed;
+    protected float bulletTimer;
+    protected float bulletattackSpeed;
     float heavyattackSpeed;
     float heavyTimer;
     float tempPowerUpTime;
@@ -69,12 +69,16 @@ public class Shot : MonoBehaviour {
     }
 
     //fire bullet
-    void Fire()
+    protected virtual void Fire()
     {
         heavyReady = HeavryWeaponCheck();
         if (Input.GetKey("j"))
         {
-            HeavyWeaponInster();
+            if (heavyWeapon)
+            {
+                HeavyWeaponInster();
+            }
+            else { return; }
         }
         if (Input.GetKeyDown("j"))
         {
@@ -87,8 +91,7 @@ public class Shot : MonoBehaviour {
         else if (Input.GetKeyUp("j"))
         {
             CancelInvoke("BulletInster");
-            //CancelInvoke("HeavyWeaponInster");
-            shotsound.Stop();
+            //CancelInvoke("HeavyWeaponInster
         }
     }
 
@@ -159,7 +162,7 @@ public class Shot : MonoBehaviour {
         go.BroadcastMessage("SetProperity", tempPowerMod);
     }
 
-    void BulletInster()
+    protected virtual void BulletInster()
     {
         bulletTimer += Time.deltaTime;
         if (bulletTimer >= bulletattackSpeed)
@@ -214,6 +217,10 @@ public class Shot : MonoBehaviour {
     {
         bullet.currentbullet = bullets[i];
         bulletattackSpeed = bullet.currentbullet.GetComponent<Bullet>().attackSpeed;
-        heavyattackSpeed = heavyWeapon.GetComponent<FollowMissile>().attackSpeed;
+        if (heavyWeapon)
+        {
+            heavyattackSpeed = heavyWeapon.GetComponent<FollowMissile>().attackSpeed;
+        }
+        else { return; }
     }
 }

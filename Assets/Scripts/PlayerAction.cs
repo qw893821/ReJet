@@ -155,7 +155,7 @@ public class PlayerAction : MonoBehaviour {
 
     }
 
-    void Damaged(float dmg)
+    public virtual void Damaged(float dmg)
     {
         if (shieldup)
         {

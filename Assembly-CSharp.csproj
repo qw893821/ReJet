@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\DirectionalBeam.cs" />
     <Compile Include="Assets\Scripts\DrillMovement.cs" />
     <Compile Include="Assets\Scripts\DroneAction.cs" />
+    <Compile Include="Assets\Scripts\DroneShot.cs" />
     <Compile Include="Assets\Scripts\DurationWeapon.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\EnemySubWeapon.cs" />

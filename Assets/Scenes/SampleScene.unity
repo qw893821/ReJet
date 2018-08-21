@@ -3758,6 +3758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d3914d3c33e104183aa7f361246416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drones: []
 --- !u!1001 &1524847369
 Prefab:
   m_ObjectHideFlags: 0
@@ -4516,6 +4517,7 @@ GameObject:
   - component: {fileID: 1734320295}
   - component: {fileID: 1734320294}
   - component: {fileID: 1734320293}
+  - component: {fileID: 1734320296}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Drone
@@ -4590,6 +4592,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734320291}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1734320296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734320291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e3f4b3cccd6448915438091524cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets:
+  - {fileID: 1756683305488844, guid: 94f474eda1d23674b9dc7c3930b30c15, type: 2}
+  heavyWeapon: {fileID: 0}
+  tempPowerMod: 0.1
 --- !u!1001 &1764545856
 Prefab:
   m_ObjectHideFlags: 0
@@ -5430,6 +5447,7 @@ GameObject:
   - component: {fileID: 2031590396}
   - component: {fileID: 2031590395}
   - component: {fileID: 2031590394}
+  - component: {fileID: 2031590397}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Drone
@@ -5504,6 +5522,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031590392}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2031590397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031590392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e3f4b3cccd6448915438091524cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets:
+  - {fileID: 1756683305488844, guid: 94f474eda1d23674b9dc7c3930b30c15, type: 2}
+  heavyWeapon: {fileID: 0}
+  tempPowerMod: 0.1
 --- !u!1 &2058137256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1810473780125454, guid: bab6202c85adeab4dad46179a5f84a7a,
